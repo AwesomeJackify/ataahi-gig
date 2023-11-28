@@ -1,0 +1,69 @@
+---
+import logo from "../assets/images/logo.png";
+import astroLogo from "../assets/images/AstroMediaLogo.svg";
+import { Image } from "astro:assets";
+import { Icon } from "astro-icon";
+
+interface Props {
+  pages: NavItem[];
+  socials: SocialItem[];
+}
+
+const { pages, socials } = Astro.props;
+---
+
+<footer
+  class="footer footer-center pt-8 px-4 pb-4 max-md:pb-2 bg-primary dark:bg-neutral text-white mt-20 gap-4"
+>
+  <Image
+    src={logo}
+    alt="logo"
+    class="rounded-2xl p-4 bg-black bg-opacity-90"
+    width={200}
+    height={200}
+  />
+  <ul class="menu menu-horizontal max-md:hidden p-0">
+    {
+      pages.map((navItem: NavItem) => (
+        <li>
+          <a href={navItem.url}>{navItem.name}</a>
+        </li>
+      ))
+    }
+  </ul>
+  <ul class="menu menu-horizontal">
+    {
+      socials.map((social: SocialItem) => (
+        <li>
+          <a href={social.action} target="_blank" aria-label={social.label}>
+            <Icon name={social.icon} class="w-6" />
+          </a>
+        </li>
+      ))
+    }
+  </ul>
+  <h1 class="w-full inline-block">
+    You can find us at <b>190 Stoddard road, Mt Roskil, Auckland</b>
+  </h1>
+  <h1 class="w-full inline-block">
+    We are open <b>Monday - Friday &#9679; 9:00AM - 4:00PM</b>
+  </h1>
+  <div
+    class="flex justify-between w-full max-md:flex-col items-center max-md:gap-6"
+  >
+    <p>© NZ Ethnic Women's Trust. All right reserved</p>
+    <p class="flex items-center gap-1 max-md:self-center">
+      Made possible by <a
+        href="https://astromedia.dev"
+        class="link"
+        target="_blank">Astro Media</a
+      ><Image
+        class="w-5"
+        src={astroLogo}
+        width={10}
+        height={10}
+        alt="digital agency"
+      />
+    </p>
+  </div>
+</footer>
