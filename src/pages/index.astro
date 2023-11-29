@@ -6,6 +6,7 @@ import amenitiesImg from "@assets/images/amenities.png";
 import classesImg from "@assets/images/classes.jpeg";
 import forWomenImg from "@assets/images/forWomen.webp";
 import communityImg from "@assets/images/community.jpeg";
+import Map from "@components/Map.astro";
 
 const features = [
   {
@@ -122,6 +123,23 @@ const features = [
         daily passes for <b>$10.00</b> for those that are currently visiting or
         want to try out the gym.
       </p>
+    </div>
+  </section>
+  <section>
+    <div class="bg-primary h-96 w-full">
+      <div class="grid grid-cols-2 max-md:grid-cols-1 place-items-center">
+        <div class="flex flex-col gap-6 text-neutral p-10 max-md:p-4">
+          <h1 class="capitalize text-6xl max-md:text-5xl font-bold">
+            Find us here
+          </h1>
+          <h2 class="text-3xl max-md:text-2xl">
+            Level 4, Scene One Apartments <br /> 2 Beach Road <br /> Auckland
+            CBD 1010
+          </h2>
+          <h2 class="text-2xl max-md:text-xl">+64 022 355 4721</h2>
+        </div>
+        <Map />
+      </div>
     </div>
   </section>
 </Layout>
