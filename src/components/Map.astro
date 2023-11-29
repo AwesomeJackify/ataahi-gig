@@ -5,7 +5,7 @@
 <div id="map" class="min-h-full h-96 w-full max-md:h-72"></div>
 
 <script>
-  import L from "Leaflet";
+  import * as L from "leaflet";
 
   var map = L.map("map").setView([-36.845262, 174.771331], 15);
   var marker = L.marker([-36.845262, 174.771331]).addTo(map);
