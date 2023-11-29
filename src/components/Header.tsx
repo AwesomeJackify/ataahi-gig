@@ -15,9 +15,9 @@ const Header = ({ pages }: Props) => {
 
   return (
     <div className="mb-10 max-md:mb-4">
-      <div className="flex justify-between items-center max-md:flex-col gap-6">
+      <div className="flex justify-between items-center max-md:flex-col gap-6 p-4">
         <div className="flex justify-between max-md:w-full items-center">
-          <a href="/" className="btn btn-ghost p-4 h-fit">
+          <a href="/" className="btn btn-ghost h-fit">
             <img
               src={logo.src}
               alt="logo"
@@ -39,7 +39,7 @@ const Header = ({ pages }: Props) => {
           )}
         </div>
         <div
-          className={`navbar bg-base-100 justify-end ${
+          className={`navbar w-fit bg-base-100 justify-end ${
             showNav ? "max-md:block" : "max-md:hidden"
           }`}
         >

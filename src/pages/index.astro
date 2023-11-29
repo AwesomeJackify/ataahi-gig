@@ -7,6 +7,7 @@ import classesImg from "@assets/images/classes.jpeg";
 import forWomenImg from "@assets/images/forWomen.webp";
 import communityImg from "@assets/images/community.jpeg";
 import Map from "@components/Map.astro";
+import { Icon } from "astro-icon";
 
 const features = [
   {
@@ -111,24 +112,23 @@ const features = [
       class="rounded-2xl w-full max-w-2xl"
       alt="Community"
     />
-    <div class="flex flex-col gap-6 text-center">
-      <h1 class="text-6xl">Pricing</h1>
+    <div class="flex flex-col gap-6">
+      <h1 class="text-6xl text-center">Pricing</h1>
       <p
         class="text-2xl max-md:text-lg leading-loose max-md:leading-loose max-w-4xl mx-auto"
       >
         At Ata Ahi we only do flexi-term contracts, this means you pay on a
-        monthly basis and can cancel anytime. <br />Our Memberships are <b
-          >$33.00</b
-        > a month, that's it, nothing else to worry about. <br />We also serve
-        daily passes for <b>$10.00</b> for those that are currently visiting or
-        want to try out the gym.
+        monthly basis and can cancel anytime. Our Memberships are <b>$33.00</b>
+         a month, that's it, nothing else to worry about. We also serve daily
+        passes for <b>$10.00</b> for those that are currently visiting or want
+        to try out the gym.
       </p>
     </div>
   </section>
   <section>
     <div class="bg-primary">
       <div class="grid grid-cols-2 max-md:grid-cols-1 place-items-center">
-        <div class="flex flex-col gap-6 text-neutral p-16 max-md:p-10">
+        <div class="flex flex-col gap-6 text-base-100 p-16 max-md:p-10">
           <h1 class="capitalize text-6xl max-md:text-5xl font-bold">
             Find us here
           </h1>
@@ -136,7 +136,11 @@ const features = [
             Level 4, Scene One Apartments <br /> 2 Beach Road <br /> Auckland
             CBD 1010
           </h2>
-          <h2 class="text-2xl max-md:text-xl">+64 022 355 4721</h2>
+          <a
+            href="tel:+640212146247"
+            class="text-2xl max-md:text-xl flex items-center btn btn-lg"
+            ><Icon pack="mdi" name="phone" class="w-8" />+64 022 355 4721</a
+          >
         </div>
         <Map />
       </div>
