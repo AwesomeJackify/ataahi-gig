@@ -2,6 +2,33 @@
 import Layout from "../layouts/Layout.astro";
 import { Image } from "astro:assets";
 import heroImg from "@assets/images/hero.png";
+import amenitiesImg from "@assets/images/amenities.png";
+import classesImg from "@assets/images/classes.jpeg";
+import forWomenImg from "@assets/images/forWomen.webp";
+
+const features = [
+  {
+    title: "Amenities",
+    url: "/amenities",
+    image: amenitiesImg,
+    description:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.",
+  },
+  {
+    title: "Classes",
+    url: "/classes",
+    image: classesImg,
+    description:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.",
+  },
+  {
+    title: "For Women",
+    url: "/forwomen",
+    image: forWomenImg,
+    description:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.",
+  },
+];
 ---
 
 <Layout title="Ata Ahi Fitness">
@@ -27,6 +54,42 @@ import heroImg from "@assets/images/hero.png";
         alt="Ata Ahi Fitness"
         class="-mt-10 w-[900px] max-md:-mt-2"
       />
+    </div>
+  </section>
+  <section class="-mt-20">
+    <div class="grid grid-cols-3 max-md:grid-cols-1">
+      {
+        features.map((feature, index) => (
+          <div class="relative">
+            <a href="#" class="group hover:cursor-pointer">
+              <div
+                class={`absolute top-0 left-0 h-full opacity-75 w-full group-hover:opacity-0 transition duration-300 ${
+                  index == 0
+                    ? "bg-orange-500"
+                    : index == 1
+                    ? "bg-blue-500"
+                    : "bg-purple-500"
+                }`}
+              />
+              <div class="absolute top-0 py-20 right-0 left-0 pl-6 justify-between bottom-0 text-white uppercase border-secondary flex flex-col gap-6">
+                <h1 class="text-6xl w-52 pt-4 border-t-8 font-bold group-hover:text-5xl group-hover:w-32 transition-all">
+                  {feature.title}
+                </h1>
+                <p class="text-base bg-primary rounded-2xl p-4 w-5/6 opacity-0 group-hover:opacity-100 transition-all">
+                  {feature.description}
+                </p>
+              </div>
+            </a>
+
+            <Image
+              src={feature.image}
+              width={900}
+              alt={feature.title}
+              class="h-96 object-cover"
+            />
+          </div>
+        ))
+      }
     </div>
   </section>
 </Layout>
