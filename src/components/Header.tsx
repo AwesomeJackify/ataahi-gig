@@ -1,4 +1,4 @@
-import logo from "../assets/images/logo.png";
+import logo from "@assets/images/logo.png";
 import { AiOutlineMenu, AiOutlineClose } from "react-icons/ai";
 import { useState } from "react";
 
@@ -14,7 +14,7 @@ const Header = ({ pages }: Props) => {
   };
 
   return (
-    <div className="mb-10 max-md:mb-4">
+    <div>
       <div className="flex justify-between items-center max-md:flex-col gap-6 p-4">
         <div className="flex justify-between max-md:w-full items-center">
           <a href="/" className="btn btn-ghost h-fit">

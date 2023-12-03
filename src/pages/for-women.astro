@@ -1,11 +1,16 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import { Image } from "astro:assets";
-import heroImg from "@assets/images/hero.png";
+
+import weAreWomenBust1 from "@assets/images/we-are-women-bust-1.png";
+import weAreWomenFitness from "@assets/images/we-are-women-bust-2.png";
 import amenitiesImg from "@assets/images/amenities.png";
 import classesImg from "@assets/images/classes.jpeg";
 import forWomenImg from "@assets/images/forWomen.webp";
 import communityImg from "@assets/images/community.jpeg";
+import womenPositiveImg from "@assets/images/women-positive.jpeg";
+import bottleImg from "@assets/images/bottle.png";
+
 import Map from "@components/Map.astro";
 import { Icon } from "astro-icon";
 
@@ -34,65 +39,58 @@ const features = [
 ];
 ---
 
-<Layout title="Ata Ahi Fitness">
+<Layout title="For Women">
   <section class="flex flex-col items-center gap-6 pt-20 max-md:pt-10">
-    <div class="text-center flex flex-col gap-6 max-md:gap-2">
-      <h1 class="uppercase text-6xl font-bold max-md:text-2xl">Welcome to</h1>
-      <h1 class="uppercase text-8xl font-bold max-md:text-4xl">
-        Ata Ahi Fitness
+    <div class="text-center flex flex-col gap-12 max-md:gap-6">
+      <h1 class="capitalize text-8xl font-bold max-md:text-6xl">
+        Welcome to your wellness sanctuary
       </h1>
-      <h2 class="text-2xl max-md:text-xs">
-        Empower your quiet strength in our community of wellness
-      </h2>
-    </div>
-    <div class="flex flex-col items-center">
-      <a
-        href=""
-        class="btn btn-primary text-base-100 shadow-2xl btn-wide mt-4 rounded-none text-2xl z-10"
-        >Join Us Today</a
-      >
-      <Image
-        src={heroImg}
-        width={900}
-        alt="Ata Ahi Fitness"
-        class="-mt-10 w-[900px] max-md:-mt-2"
-      />
+      <div>
+        <h1 class="text-3xl max-md:text-base max-w-4xl mx-auto">
+          The safe space for women to nurture their relationship with health and
+          wellness at the intersection of movement and mental health.
+        </h1>
+      </div>
+      <div class="flex flex-row justify-around items-baseline">
+        <Image
+          src={weAreWomenBust1}
+          alt="we are women bust"
+          class="max-md:w-1/2 object-scale-down"
+        />
+        <Image
+          src={weAreWomenFitness}
+          alt="we are women fitness"
+          class="object-scale-down max-md:w-1/2"
+        />
+      </div>
     </div>
   </section>
-  <section class="-mt-20">
-    <div class="grid grid-cols-3 max-md:grid-cols-1">
-      {
-        features.map((feature, index) => (
-          <div class="relative">
-            <a href="#" class="group hover:cursor-pointer">
-              <div
-                class={`absolute top-0 left-0 h-full opacity-75 w-full group-hover:opacity-0 transition duration-300 ${
-                  index == 0
-                    ? "bg-orange-500"
-                    : index == 1
-                    ? "bg-blue-500"
-                    : "bg-purple-500"
-                }`}
-              />
-              <div class="absolute top-0 py-20 right-0 left-0 pl-6 justify-between bottom-0 text-white uppercase border-secondary flex flex-col gap-6">
-                <h1 class="text-6xl w-52 pt-4 border-t-8 font-bold group-hover:text-5xl group-hover:w-32 transition-all">
-                  {feature.title}
-                </h1>
-                <p class="text-base bg-primary rounded-2xl p-4 w-5/6 opacity-0 md:group-hover:opacity-100 transition-all">
-                  {feature.description}
-                </p>
-              </div>
-            </a>
-
-            <Image
-              src={feature.image}
-              width={900}
-              alt={feature.title}
-              class="h-96 object-cover max-md:h-72"
-            />
-          </div>
-        ))
-      }
+  <section class="bg-secondary flex flex-col gap-16 py-20 max-md:py-10">
+    <div class="flex items-center gap-16 justify-center">
+      <h1 class="text-8xl font-bold max-md:text-6xl">Our Values</h1>
+      <Image
+        src={bottleImg}
+        alt="bottle image"
+        class="w-16 rotate-45 max-md:hidden"
+      />
+    </div>
+    <div
+      class="flex justify-center items-center max-md:flex-col gap-12 max-md:grid-cols-1 max-md:px-4"
+    >
+      <Image
+        src={womenPositiveImg}
+        alt="positive women"
+        class="w-96 max-md:w-60 max-md:place-self-auto rounded-2xl place-self-end"
+      />
+      <p class="text-2xl max-w-lg">
+        To provide a wellness sanctuary for all women to explore and define what
+        wellness means to them. <br /><br />Babes of Wellness is leading the
+        industry by bridging the world of mental and physical health into one
+        wholesome experience.<br /><br /><b
+          >We're teaching people to move their bodies out of love and respect
+          for themselves, not because of dissatisfaction or discomfort.</b
+        >
+      </p>
     </div>
   </section>
   <section class="p-10 flex flex-col gap-12 items-center">

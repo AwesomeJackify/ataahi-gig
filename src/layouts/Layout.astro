@@ -68,7 +68,13 @@ const socials = [
   <body>
     <main class="max-w-screen-2xl mx-auto">
       <Header pages={pages} client:load />
-      <slot />
+      <div
+        data-theme={`${
+          Astro.url.pathname == "/for-women" ? "valentine" : "winter"
+        }`}
+      >
+        <slot />
+      </div>
     </main>
     <Footer pages={pages} socials={socials} />
   </body>
