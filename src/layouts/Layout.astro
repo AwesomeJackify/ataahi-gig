@@ -70,7 +70,8 @@ const socials = [
       <Header pages={pages} client:load />
       <div
         data-theme={`${
-          Astro.url.pathname.split("/").at(-1) == "for-women"
+          Astro.url.pathname == "/for-women" ||
+          Astro.url.pathname == "/for-women/"
             ? "valentine"
             : "winter"
         }`}
