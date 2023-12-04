@@ -4,46 +4,15 @@ import { Image } from "astro:assets";
 
 import weAreWomenBust1 from "@assets/images/we-are-women-bust-1.png";
 import weAreWomenFitness from "@assets/images/we-are-women-bust-2.png";
-import amenitiesImg from "@assets/images/amenities.png";
-import classesImg from "@assets/images/classes.jpeg";
-import forWomenImg from "@assets/images/forWomen.webp";
-import communityImg from "@assets/images/community.jpeg";
 import womenPositiveImg from "@assets/images/women-positive.jpeg";
 import bottleImg from "@assets/images/bottle.png";
-
-import Map from "@components/Map.astro";
-import { Icon } from "astro-icon";
-
-const features = [
-  {
-    title: "Amenities",
-    url: "/amenities",
-    image: amenitiesImg,
-    description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.",
-  },
-  {
-    title: "Classes",
-    url: "/classes",
-    image: classesImg,
-    description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.",
-  },
-  {
-    title: "For Women",
-    url: "/for-women",
-    image: forWomenImg,
-    description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.",
-  },
-];
 ---
 
 <Layout title="For Women">
   <section class="flex flex-col items-center gap-6 pt-20 max-md:pt-10">
     <div class="text-center flex flex-col gap-12 max-md:gap-6">
       <h1 class="capitalize text-8xl font-bold max-md:text-6xl">
-        Welcome to your wellness sanctuary
+        Say hello to your wellness sanctuary
       </h1>
       <div>
         <h1 class="text-3xl max-md:text-base max-w-4xl mx-auto">
@@ -93,7 +62,7 @@ const features = [
       </p>
     </div>
   </section>
-  <section
+  <!-- <section
     class="p-32 max-md:px-6 max-md:py-24 bg-[url('/women-class.jpeg')] bg-cover bg-fixed"
   >
     <div class="flex flex-col items-center gap-8">
@@ -103,8 +72,8 @@ const features = [
       <a
         href=""
         class="btn btn-primary text-base-100 shadow-2xl btn-wide mt-4 rounded-none text-2xl z-10"
-        >Join Us Today</a
+        >Join Now</a
       >
     </div>
-  </section>
+  </section> -->
 </Layout>

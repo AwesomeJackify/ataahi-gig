@@ -1,0 +1,188 @@
+---
+import Layout from "../layouts/Layout.astro";
+import { Image } from "astro:assets";
+
+import weAreWomenBust1 from "@assets/images/we-are-women-bust-1.png";
+import weAreWomenFitness from "@assets/images/we-are-women-bust-2.png";
+import womenPositiveImg from "@assets/images/women-positive.jpeg";
+import bottleImg from "@assets/images/bottle.png";
+
+import amenitiesImg1 from "@assets/images/gym/IMG_0990.jpg";
+import amenitiesImg2 from "@assets/images/gym/IMG_0993.jpg";
+import amenitiesImg3 from "@assets/images/gym/IMG_0996.jpg";
+import amenitiesImg4 from "@assets/images/gym/IMG_1006.jpg";
+import amenitiesImg5 from "@assets/images/gym/IMG_1008.jpg";
+import amenitiesImg6 from "@assets/images/gym/IMG_1009.jpg";
+import amenitiesImg7 from "@assets/images/gym/IMG_1015.jpg";
+import amenitiesImg8 from "@assets/images/gym/IMG_1016.jpg";
+import amenitiesImg9 from "@assets/images/gym/IMG_1019.jpg";
+import amenitiesImg10 from "@assets/images/gym/IMG_1028.jpg";
+import amenitiesImg11 from "@assets/images/gym/IMG_1034.jpg";
+import amenitiesImg12 from "@assets/images/gym/IMG_1037.jpg";
+---
+
+<Layout title="Amenities">
+  <section class="flex flex-col items-center gap-6 pt-20 max-md:pt-10">
+    <div class="text-center flex flex-col gap-12 max-md:gap-6">
+      <h1 class="capitalize text-8xl font-bold max-md:text-6xl">
+        Say hello to your wellness sanctuary
+      </h1>
+      <div>
+        <h1 class="text-3xl max-md:text-base max-w-4xl mx-auto">
+          The safe space for women to nurture their relationship with health and
+          wellness at the intersection of movement and mental health.
+        </h1>
+      </div>
+      <div class="flex flex-row justify-around items-baseline">
+        <Image
+          src={weAreWomenBust1}
+          alt="we are women bust"
+          class="max-md:w-1/2 object-scale-down"
+        />
+        <Image
+          src={weAreWomenFitness}
+          alt="we are women fitness"
+          class="object-scale-down max-md:w-1/2"
+        />
+      </div>
+    </div>
+  </section>
+  <section class="bg-secondary flex flex-col gap-16 py-20 max-md:py-10">
+    <div class="flex items-center gap-16 justify-center">
+      <h1 class="text-8xl font-bold max-md:text-6xl">Our Values</h1>
+      <Image
+        src={bottleImg}
+        alt="bottle image"
+        class="w-16 rotate-45 max-md:hidden"
+      />
+    </div>
+    <div
+      class="flex justify-center items-center max-md:flex-col gap-12 max-md:grid-cols-1 max-md:px-4"
+    >
+      <Image
+        src={womenPositiveImg}
+        alt="positive women"
+        class="w-96 max-md:w-60 max-md:place-self-auto rounded-2xl place-self-end border-white border-8"
+      />
+      <p class="text-2xl max-w-lg">
+        To provide a wellness sanctuary for all women to explore and define what
+        wellness means to them. <br /><br />We are leading the industry by
+        bridging the world of mental and physical health into one wholesome
+        experience.<br /><br /><b
+          >We're teaching people to move their bodies out of love and respect
+          for themselves, not because of dissatisfaction or discomfort.</b
+        >
+      </p>
+    </div>
+  </section>
+  <div class="swiper h-96 gallery">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide">
+        <Image
+          src={amenitiesImg1}
+          alt="amenities image"
+          class="w-full h-full object-cover border-8 border-secondary"
+        />
+      </div>
+      <div class="swiper-slide">
+        <Image
+          src={amenitiesImg2}
+          alt="amenities image"
+          class="w-full h-full object-cover border-8 border-secondary"
+        />
+      </div>
+      <div class="swiper-slide">
+        <Image
+          src={amenitiesImg3}
+          alt="amenities image"
+          class="w-full h-full object-cover border-8 border-secondary"
+        />
+      </div>
+      <div class="swiper-slide">
+        <Image
+          src={amenitiesImg4}
+          alt="amenities image"
+          class="w-full h-full object-cover border-8 border-secondary"
+        />
+      </div>
+      <div class="swiper-slide">
+        <Image
+          src={amenitiesImg5}
+          alt="amenities image"
+          class="w-full h-full object-cover border-8 border-secondary"
+        />
+      </div>
+      <div class="swiper-slide">
+        <Image
+          src={amenitiesImg6}
+          alt="amenities image"
+          class="w-full h-full object-cover border-8 border-secondary"
+        />
+      </div>
+      <div class="swiper-slide">
+        <Image
+          src={amenitiesImg7}
+          alt="amenities image"
+          class="w-full h-full object-cover border-8 border-secondary"
+        />
+      </div>
+      <div class="swiper-slide">
+        <Image
+          src={amenitiesImg8}
+          alt="amenities image"
+          class="w-full h-full object-cover border-8 border-secondary"
+        />
+      </div>
+      <div class="swiper-slide">
+        <Image
+          src={amenitiesImg9}
+          alt="amenities image"
+          class="w-full h-full object-cover border-8 border-secondary"
+        />
+      </div>
+      <div class="swiper-slide">
+        <Image
+          src={amenitiesImg10}
+          alt="amenities image"
+          class="w-full h-full object-cover border-8 border-secondary"
+        />
+      </div>
+      <div class="swiper-slide">
+        <Image
+          src={amenitiesImg11}
+          alt="amenities image"
+          class="w-full h-full object-cover border-8 border-secondary"
+        />
+      </div>
+      <div class="swiper-slide">
+        <Image
+          src={amenitiesImg12}
+          alt="amenities image"
+          class="w-full h-full object-cover border-8 border-secondary"
+        />
+      </div>
+    </div>
+
+    <div class="swiper-pagination"></div>
+  </div>
+</Layout>
+
+<script>
+  // import Swiper bundle with all modules installed
+  import Swiper from "swiper/bundle";
+
+  // import styles bundle
+  import "swiper/css/bundle";
+
+  const swiper = new Swiper(".gallery", {
+    slidesPerView: 3,
+    autoplay: {
+      delay: 5000,
+      disableOnInteraction: false,
+    },
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+  });
+</script>
