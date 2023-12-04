@@ -19,63 +19,72 @@ import amenitiesImg9 from "@assets/images/gym/IMG_1019.jpg";
 import amenitiesImg10 from "@assets/images/gym/IMG_1028.jpg";
 import amenitiesImg11 from "@assets/images/gym/IMG_1034.jpg";
 import amenitiesImg12 from "@assets/images/gym/IMG_1037.jpg";
+
+const amenities = [
+  {
+    category: "Gym amenities",
+    items: [
+      "24-hour security",
+      "convenient parking",
+      "private restrooms",
+      "private showers",
+      "free classes",
+    ],
+  },
+  {
+    category: "Cardio",
+    items: [
+      "treadmills w/ TVs",
+      "ski ergs",
+      "rowing machines",
+      "exercise bikes",
+      "ellipticals",
+      "boxing equipment",
+      "yoga mats",
+    ],
+  },
+  {
+    category: "Strength",
+    items: [
+      "squat racks",
+      "cable machines",
+      "plate loaded",
+      "barbells",
+      "dumbbells",
+      "kettlebells",
+      "medicine balls",
+    ],
+  },
+  {
+    category: "Training Services",
+    items: ["personal training", "fitness assessment"],
+  },
+];
 ---
 
 <Layout title="Amenities">
-  <section class="flex flex-col items-center gap-6 pt-20 max-md:pt-10">
-    <div class="text-center flex flex-col gap-12 max-md:gap-6">
+  <section class="flex flex-col items-center gap-6 pt-20 max-md:pt-10 px-2">
+    <div class="flex flex-col gap-24 max-md:gap-12">
       <h1 class="capitalize text-8xl font-bold max-md:text-6xl">
-        Say hello to your wellness sanctuary
+        What we have to offer
       </h1>
-      <div>
-        <h1 class="text-3xl max-md:text-base max-w-4xl mx-auto">
-          The safe space for women to nurture their relationship with health and
-          wellness at the intersection of movement and mental health.
-        </h1>
-      </div>
-      <div class="flex flex-row justify-around items-baseline">
-        <Image
-          src={weAreWomenBust1}
-          alt="we are women bust"
-          class="max-md:w-1/2 object-scale-down"
-        />
-        <Image
-          src={weAreWomenFitness}
-          alt="we are women fitness"
-          class="object-scale-down max-md:w-1/2"
-        />
+      <div class="grid grid-cols-4 max-md:grid-cols-2 gap-6">
+        {
+          amenities.map((amenity) => (
+            <div>
+              <h1 class="capitalize text-2xl">{amenity.category}</h1>
+              <ul class="mt-2">
+                {amenity.items.map((item) => (
+                  <li class="capitalize list-disc ml-4">{item}</li>
+                ))}
+              </ul>
+            </div>
+          ))
+        }
       </div>
     </div>
   </section>
-  <section class="bg-secondary flex flex-col gap-16 py-20 max-md:py-10">
-    <div class="flex items-center gap-16 justify-center">
-      <h1 class="text-8xl font-bold max-md:text-6xl">Our Values</h1>
-      <Image
-        src={bottleImg}
-        alt="bottle image"
-        class="w-16 rotate-45 max-md:hidden"
-      />
-    </div>
-    <div
-      class="flex justify-center items-center max-md:flex-col gap-12 max-md:grid-cols-1 max-md:px-4"
-    >
-      <Image
-        src={womenPositiveImg}
-        alt="positive women"
-        class="w-96 max-md:w-60 max-md:place-self-auto rounded-2xl place-self-end border-white border-8"
-      />
-      <p class="text-2xl max-w-lg">
-        To provide a wellness sanctuary for all women to explore and define what
-        wellness means to them. <br /><br />We are leading the industry by
-        bridging the world of mental and physical health into one wholesome
-        experience.<br /><br /><b
-          >We're teaching people to move their bodies out of love and respect
-          for themselves, not because of dissatisfaction or discomfort.</b
-        >
-      </p>
-    </div>
-  </section>
-  <div class="swiper h-96 gallery">
+  <div class="swiper h-96 gallery mt-12">
     <div class="swiper-wrapper">
       <div class="swiper-slide">
         <Image
@@ -175,7 +184,17 @@ import amenitiesImg12 from "@assets/images/gym/IMG_1037.jpg";
   import "swiper/css/bundle";
 
   const swiper = new Swiper(".gallery", {
-    slidesPerView: 3,
+    breakpoints: {
+      640: {
+        slidesPerView: 1,
+      },
+      768: {
+        slidesPerView: 2,
+      },
+      1024: {
+        slidesPerView: 3,
+      },
+    },
     autoplay: {
       delay: 5000,
       disableOnInteraction: false,
