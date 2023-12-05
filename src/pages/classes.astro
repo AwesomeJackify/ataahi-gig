@@ -1,0 +1,74 @@
+---
+import Layout from "../layouts/Layout.astro";
+import { Image } from "astro:assets";
+import Icon from "astro-icon";
+
+import image1 from "../assets/images/muscle-toning.webp";
+
+const classes = [
+  {
+    title: "muscle toning",
+    description:
+      "Our muscle toning classes are designed to help you build muscle and strength. We offer a variety of classes that focus on different muscle groups, so you can find the right class for your needs.",
+    image: image1,
+  },
+  {
+    title: "muscle toning",
+    description:
+      "Our muscle toning classes are designed to help you build muscle and strength. We offer a variety of classes that focus on different muscle groups, so you can find the right class for your needs.",
+    image: image1,
+  },
+  {
+    title: "muscle toning",
+    description:
+      "Our muscle toning classes are designed to help you build muscle and strength. We offer a variety of classes that focus on different muscle groups, so you can find the right class for your needs.",
+    image: image1,
+  },
+  {
+    title: "muscle toning",
+    description:
+      "Our muscle toning classes are designed to help you build muscle and strength. We offer a variety of classes that focus on different muscle groups, so you can find the right class for your needs.",
+    image: image1,
+  },
+];
+---
+
+<Layout title="Classes">
+  <section>
+    <div
+      class="flex flex-col items-center gap-24 max-md:gap-12 py-20 max-md:py-10 px-2"
+    >
+      <div class="flex flex-col gap-12 max-md:gap-12">
+        <h1 class="capitalize text-center text-8xl font-bold max-md:text-6xl">
+          Get Social, Get Fit
+        </h1>
+        <h1 class="text-xl text-center max-md:text-base max-w-4xl mx-auto">
+          Group exercise classes at Ata Ahi Fitness are an excellent way to keep
+          your fitness routine fresh and engaging. We offer a variety of classes
+          tailored for weight loss, muscle building, and cardiovascular health
+          to suit everyone's needs. Each fitness class helps you shed stress and
+          leaves you feeling closer to achieving your fitness goals.
+        </h1>
+      </div>
+      <div class="grid grid-cols-3 gap-12 max-md:grid-cols-1">
+        {
+          classes.map((classItem) => (
+            <div class="flex flex-col gap-4 bg-base-300 pb-4">
+              <Image
+                src={classItem.image}
+                alt={classItem.title}
+                class="rounded-md"
+              />
+              <h1 class="text-4xl uppercase font-semibold mx-4 mt-4">
+                {classItem.title}
+              </h1>
+              <p class="font-light leading-loose mx-4">
+                {classItem.description}
+              </p>
+            </div>
+          ))
+        }
+      </div>
+    </div>
+  </section>
+</Layout>
