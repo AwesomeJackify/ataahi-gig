@@ -64,122 +64,124 @@ const amenities = [
 ---
 
 <Layout title="Amenities">
-  <section class="flex flex-col items-center gap-6 pt-20 max-md:pt-10 px-2">
-    <div class="flex flex-col gap-24 max-md:gap-12">
-      <h1 class="capitalize text-center text-8xl font-bold max-md:text-6xl">
-        What we have to offer
-      </h1>
-      <div
-        class="grid grid-cols-4 max-md:grid-cols-2 gap-6 max-lg:grid-cols-3 mx-auto"
-      >
-        {
-          amenities.map((amenity) => (
-            <div class="flex flex-col gap-4">
-              <div class="flex items-center gap-2">
-                <Icon name={amenity.icon} class="w-8" />
-                <h1 class="capitalize text-2xl">{amenity.category}</h1>
+  <section>
+    <div class="flex flex-col items-center gap-6 pt-20 max-md:pt-10 px-2">
+      <div class="flex flex-col gap-24 max-md:gap-12">
+        <h1 class="capitalize text-center text-8xl font-bold max-md:text-6xl">
+          What we have to offer
+        </h1>
+        <div
+          class="grid grid-cols-4 max-md:grid-cols-2 gap-6 max-lg:grid-cols-3 mx-auto"
+        >
+          {
+            amenities.map((amenity) => (
+              <div class="flex flex-col gap-4">
+                <div class="flex items-center gap-2">
+                  <Icon name={amenity.icon} class="w-8" />
+                  <h1 class="capitalize text-2xl">{amenity.category}</h1>
+                </div>
+                <ul class="mt-2">
+                  {amenity.items.map((item) => (
+                    <li class="capitalize list-disc ml-4">{item}</li>
+                  ))}
+                </ul>
               </div>
-              <ul class="mt-2">
-                {amenity.items.map((item) => (
-                  <li class="capitalize list-disc ml-4">{item}</li>
-                ))}
-              </ul>
-            </div>
-          ))
-        }
+            ))
+          }
+        </div>
       </div>
+    </div>
+    <div class="swiper h-96 gallery mt-28">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <Image
+            src={amenitiesImg1}
+            alt="amenities image"
+            class="w-full h-full object-cover border-8 border-secondary"
+          />
+        </div>
+        <div class="swiper-slide">
+          <Image
+            src={amenitiesImg2}
+            alt="amenities image"
+            class="w-full h-full object-cover border-8 border-secondary"
+          />
+        </div>
+        <div class="swiper-slide">
+          <Image
+            src={amenitiesImg3}
+            alt="amenities image"
+            class="w-full h-full object-cover border-8 border-secondary"
+          />
+        </div>
+        <div class="swiper-slide">
+          <Image
+            src={amenitiesImg4}
+            alt="amenities image"
+            class="w-full h-full object-cover border-8 border-secondary"
+          />
+        </div>
+        <div class="swiper-slide">
+          <Image
+            src={amenitiesImg5}
+            alt="amenities image"
+            class="w-full h-full object-cover border-8 border-secondary"
+          />
+        </div>
+        <div class="swiper-slide">
+          <Image
+            src={amenitiesImg6}
+            alt="amenities image"
+            class="w-full h-full object-cover border-8 border-secondary"
+          />
+        </div>
+        <div class="swiper-slide">
+          <Image
+            src={amenitiesImg7}
+            alt="amenities image"
+            class="w-full h-full object-cover border-8 border-secondary"
+          />
+        </div>
+        <div class="swiper-slide">
+          <Image
+            src={amenitiesImg8}
+            alt="amenities image"
+            class="w-full h-full object-cover border-8 border-secondary"
+          />
+        </div>
+        <div class="swiper-slide">
+          <Image
+            src={amenitiesImg9}
+            alt="amenities image"
+            class="w-full h-full object-cover border-8 border-secondary"
+          />
+        </div>
+        <div class="swiper-slide">
+          <Image
+            src={amenitiesImg10}
+            alt="amenities image"
+            class="w-full h-full object-cover border-8 border-secondary"
+          />
+        </div>
+        <div class="swiper-slide">
+          <Image
+            src={amenitiesImg11}
+            alt="amenities image"
+            class="w-full h-full object-cover border-8 border-secondary"
+          />
+        </div>
+        <div class="swiper-slide">
+          <Image
+            src={amenitiesImg12}
+            alt="amenities image"
+            class="w-full h-full object-cover border-8 border-secondary"
+          />
+        </div>
+      </div>
+
+      <div class="swiper-pagination"></div>
     </div>
   </section>
-  <div class="swiper h-96 gallery mt-12">
-    <div class="swiper-wrapper">
-      <div class="swiper-slide">
-        <Image
-          src={amenitiesImg1}
-          alt="amenities image"
-          class="w-full h-full object-cover border-8 border-secondary"
-        />
-      </div>
-      <div class="swiper-slide">
-        <Image
-          src={amenitiesImg2}
-          alt="amenities image"
-          class="w-full h-full object-cover border-8 border-secondary"
-        />
-      </div>
-      <div class="swiper-slide">
-        <Image
-          src={amenitiesImg3}
-          alt="amenities image"
-          class="w-full h-full object-cover border-8 border-secondary"
-        />
-      </div>
-      <div class="swiper-slide">
-        <Image
-          src={amenitiesImg4}
-          alt="amenities image"
-          class="w-full h-full object-cover border-8 border-secondary"
-        />
-      </div>
-      <div class="swiper-slide">
-        <Image
-          src={amenitiesImg5}
-          alt="amenities image"
-          class="w-full h-full object-cover border-8 border-secondary"
-        />
-      </div>
-      <div class="swiper-slide">
-        <Image
-          src={amenitiesImg6}
-          alt="amenities image"
-          class="w-full h-full object-cover border-8 border-secondary"
-        />
-      </div>
-      <div class="swiper-slide">
-        <Image
-          src={amenitiesImg7}
-          alt="amenities image"
-          class="w-full h-full object-cover border-8 border-secondary"
-        />
-      </div>
-      <div class="swiper-slide">
-        <Image
-          src={amenitiesImg8}
-          alt="amenities image"
-          class="w-full h-full object-cover border-8 border-secondary"
-        />
-      </div>
-      <div class="swiper-slide">
-        <Image
-          src={amenitiesImg9}
-          alt="amenities image"
-          class="w-full h-full object-cover border-8 border-secondary"
-        />
-      </div>
-      <div class="swiper-slide">
-        <Image
-          src={amenitiesImg10}
-          alt="amenities image"
-          class="w-full h-full object-cover border-8 border-secondary"
-        />
-      </div>
-      <div class="swiper-slide">
-        <Image
-          src={amenitiesImg11}
-          alt="amenities image"
-          class="w-full h-full object-cover border-8 border-secondary"
-        />
-      </div>
-      <div class="swiper-slide">
-        <Image
-          src={amenitiesImg12}
-          alt="amenities image"
-          class="w-full h-full object-cover border-8 border-secondary"
-        />
-      </div>
-    </div>
-
-    <div class="swiper-pagination"></div>
-  </div>
 </Layout>
 
 <script>
