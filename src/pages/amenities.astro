@@ -94,6 +94,20 @@ const amenities = [
     <div class="swiper h-96 gallery mt-28">
       <div class="swiper-wrapper">
         <div class="swiper-slide">
+          <video
+            width="320"
+            height="240"
+            playsinline
+            autoplay
+            muted
+            loop
+            class="w-full h-full object-cover border-8 border-secondary"
+          >
+            <source src="/gym.mov" type="video/mp4" />
+             Your browser does not support the video tag.
+          </video>
+        </div>
+        <div class="swiper-slide">
           <Image
             src={amenitiesImg1}
             alt="amenities image"
@@ -205,7 +219,8 @@ const amenities = [
     },
     autoplay: {
       delay: 5000,
-      disableOnInteraction: false,
+      disableOnInteraction: true,
+      pauseOnMouseEnter: true,
     },
     pagination: {
       el: ".swiper-pagination",
