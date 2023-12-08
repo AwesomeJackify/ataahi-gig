@@ -3,19 +3,6 @@ import Layout from "../layouts/Layout.astro";
 import { Image } from "astro:assets";
 import Icon from "astro-icon";
 
-import amenitiesImg1 from "@assets/images/gym/IMG_0990.jpg";
-import amenitiesImg2 from "@assets/images/gym/IMG_0993.jpg";
-import amenitiesImg3 from "@assets/images/gym/IMG_0996.jpg";
-import amenitiesImg4 from "@assets/images/gym/IMG_1006.jpg";
-import amenitiesImg5 from "@assets/images/gym/IMG_1008.jpg";
-import amenitiesImg6 from "@assets/images/gym/IMG_1009.jpg";
-import amenitiesImg7 from "@assets/images/gym/IMG_1015.jpg";
-import amenitiesImg8 from "@assets/images/gym/IMG_1016.jpg";
-import amenitiesImg9 from "@assets/images/gym/IMG_1019.jpg";
-import amenitiesImg10 from "@assets/images/gym/IMG_1028.jpg";
-import amenitiesImg11 from "@assets/images/gym/IMG_1034.jpg";
-import amenitiesImg12 from "@assets/images/gym/IMG_1037.jpg";
-
 const amenities = [
   {
     category: "Gym amenities",
@@ -65,7 +52,7 @@ const amenities = [
 
 <Layout title="Amenities">
   <section>
-    <div class="flex flex-col items-center gap-6 pt-20 max-md:pt-10 px-2">
+    <div class="flex flex-col items-center gap-6 py-20 max-md:py-10 px-2">
       <div class="flex flex-col gap-24 max-md:gap-12">
         <h1 class="capitalize text-center text-8xl font-bold max-md:text-6xl">
           What we have to offer
@@ -90,110 +77,6 @@ const amenities = [
           }
         </div>
       </div>
-    </div>
-    <div class="swiper h-96 gallery mt-28">
-      <div class="swiper-wrapper">
-        <div class="swiper-slide">
-          <video
-            width="320"
-            height="240"
-            playsinline
-            autoplay
-            muted
-            loop
-            class="w-full h-full object-cover border-8 border-secondary"
-          >
-            <source src="/gym.mov" type="video/mp4" />
-             Your browser does not support the video tag.
-          </video>
-        </div>
-        <div class="swiper-slide">
-          <Image
-            src={amenitiesImg1}
-            alt="amenities image"
-            class="w-full h-full object-cover border-8 border-secondary"
-          />
-        </div>
-        <div class="swiper-slide">
-          <Image
-            src={amenitiesImg2}
-            alt="amenities image"
-            class="w-full h-full object-cover border-8 border-secondary"
-          />
-        </div>
-        <div class="swiper-slide">
-          <Image
-            src={amenitiesImg3}
-            alt="amenities image"
-            class="w-full h-full object-cover border-8 border-secondary"
-          />
-        </div>
-        <div class="swiper-slide">
-          <Image
-            src={amenitiesImg4}
-            alt="amenities image"
-            class="w-full h-full object-cover border-8 border-secondary"
-          />
-        </div>
-        <div class="swiper-slide">
-          <Image
-            src={amenitiesImg5}
-            alt="amenities image"
-            class="w-full h-full object-cover border-8 border-secondary"
-          />
-        </div>
-        <div class="swiper-slide">
-          <Image
-            src={amenitiesImg6}
-            alt="amenities image"
-            class="w-full h-full object-cover border-8 border-secondary"
-          />
-        </div>
-        <div class="swiper-slide">
-          <Image
-            src={amenitiesImg7}
-            alt="amenities image"
-            class="w-full h-full object-cover border-8 border-secondary"
-          />
-        </div>
-        <div class="swiper-slide">
-          <Image
-            src={amenitiesImg8}
-            alt="amenities image"
-            class="w-full h-full object-cover border-8 border-secondary"
-          />
-        </div>
-        <div class="swiper-slide">
-          <Image
-            src={amenitiesImg9}
-            alt="amenities image"
-            class="w-full h-full object-cover border-8 border-secondary"
-          />
-        </div>
-        <div class="swiper-slide">
-          <Image
-            src={amenitiesImg10}
-            alt="amenities image"
-            class="w-full h-full object-cover border-8 border-secondary"
-          />
-        </div>
-        <div class="swiper-slide">
-          <Image
-            src={amenitiesImg11}
-            alt="amenities image"
-            class="w-full h-full object-cover border-8 border-secondary"
-          />
-        </div>
-        <div class="swiper-slide">
-          <Image
-            src={amenitiesImg12}
-            alt="amenities image"
-            class="w-full h-full object-cover border-8 border-secondary"
-          />
-        </div>
-      </div>
-
-      <div class="swiper-pagination"></div>
     </div>
   </section>
 </Layout>
