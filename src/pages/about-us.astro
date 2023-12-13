@@ -1,0 +1,87 @@
+---
+import { Image } from "astro:assets";
+import Layout from "src/layouts/Layout.astro";
+import people from "src/assets/images/people-smiling.jpg";
+---
+
+<Layout title="About us">
+  <section>
+    <div class="flex flex-col items-center gap-6 py-20 max-md:py-10 px-2">
+      <Image
+        class="w-96 max-md:w-72"
+        src={people}
+        alt="Astro logo"
+        width={500}
+        height={500}
+      />
+      <div class="flex flex-col justify-center items-center gap-8">
+        <h1 class="capitalize text-center text-6xl font-bold max-md:text-4xl">
+          Meet Adele - The Heart Behind Our Gym
+        </h1>
+        <div class="w-1/2 mx-auto mb-6">
+          <h2 class="text-xl mb-3">Embarking on a Fitness Odyssey</h2>
+          <p class="mb-4">
+            Growing up in central Auckland, my life took me from the bustling
+            city streets to distant shores and back, but it's the vibrant energy
+            of downtown Auckland that I call home. It's here, amidst these
+            familiar streets, that my unexpected journey into fitness began.
+          </p>
+
+          <h2 class="text-xl mb-3">
+            From Reluctant Participant to Fitness Advocate
+          </h2>
+          <p class="mb-4">
+            "Adele in the fitness industry? Really?" That’s what my friends and
+            family used to say. I was the master of excuses when it came to
+            sports and PE, and yet, here I am, an enthusiast for the very thing
+            I once avoided. The transformation wasn't overnight, but every early
+            morning workout (yes, even the dreaded burpees) brought me closer to
+            appreciating the power and joy of fitness. I'm proud to be part of
+            this world now, where I start my day at the crack of dawn, energised
+            and ready.
+          </p>
+
+          <h2 class="text-xl mb-3">Finding Strength in My Roots</h2>
+          <p class="mb-4">
+            My family's sporting legacy is a tapestry of extraordinary talent -
+            from great-grandfathers to cousins who've graced international
+            arenas. As for me, I took a different path, one that initially
+            skirted the edges of athletic endeavour. But through boxing, I found
+            my rhythm, my passion. It wasn't about becoming a champion; it was
+            about embracing the discipline, the technique, and the sheer energy
+            of the sport.
+          </p>
+
+          <h2 class="text-xl mb-3">
+            "Fitness is for Everyone" - Adele's Promise
+          </h2>
+          <p class="mb-4">
+            "Walking into a gym for the first time can be daunting. I know
+            because I've been there. That's why I've created a space where
+            everyone belongs, regardless of their fitness level or background.
+            Here, it's not about being perfect; it's about being present and
+            giving it your all."
+          </p>
+
+          <h2 class="text-xl mb-3">Our Philosophy - Beyond Just Equipment</h2>
+          <p class="mb-4">
+            Our gym might lack the glitz of high-end equipment, but it's
+            brimming with something far more valuable - heart and soul. Our
+            trainers don't just coach; they inspire. They teach you to tap into
+            your inner strength, turning your body into the most powerful
+            machine there is. It's an ethos that builds more than just muscle;
+            it builds character and camaraderie.
+          </p>
+
+          <h2 class="text-xl mb-3">Join Our Community, Find Your Strength</h2>
+          <p>
+            We're more than just a gym; we're a family. A place where every
+            sweat, every laugh, and every challenge shared brings us closer.
+            It's not about how you look; it's about how you feel. So, come as
+            you are, and let's embark on this fitness journey together.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+</Layout>
