@@ -1,0 +1,72 @@
+---
+import { Image } from "astro:assets";
+import Layout from "src/layouts/Layout.astro";
+import people from "src/assets/images/people-smiling.jpg";
+---
+
+<Layout title="About us">
+  <section>
+    <div class="flex flex-col items-center gap-6 py-20 max-md:py-10 px-2">
+      <Image
+        class="w-96 max-md:w-72"
+        src={people}
+        alt="People smiling"
+        width={500}
+        height={500}
+      />
+      <div class="flex flex-col justify-center items-center gap-8">
+        <h1 class="capitalize text-center text-6xl font-bold max-md:text-4xl">
+          Join us
+        </h1>
+        <div class="text-2xl max-md:text-xl md:w-1/2 w-2/3 flex flex-col gap-4">
+          <h2>
+            Congratulations on making it through the first step of wanting to
+            join a gym, the next step which follows is to set up a <span
+              class="font-bold">appointment</span
+            >
+          </h2>
+          <div class="flex flex-col gap-8 text-center">
+            <div class="flex items-center justify-center text-center gap-4">
+              <h2>Give us a ring at</h2>
+              <a
+                href="tel:+640212146247"
+                class="text-2xl max-md:text-xl flex items-center btn btn-lg btn-primary"
+              >
+                <svg viewBox="0 0 24 24" class="w-8" astro-icon="mdi:phone">
+                  <path
+                    fill="currentColor"
+                    d="M6.62 10.79c1.44 2.83 3.76 5.15 6.59 6.59l2.2-2.2c.28-.28.67-.36 1.02-.25 1.12.37 2.32.57 3.57.57a1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"
+                  ></path>
+                </svg>
+                 +64 022 355 4721
+              </a>
+            </div>
+            <div class="flex items-center justify-center gap-4 text-center">
+              <h2>Or flick us a email</h2>
+              <a
+                href="mailto:adele@ataahifitness.co.nz"
+                class="text-2xl max-md:text-xl flex items-center btn btn-lg btn-secondary"
+              >
+                <svg viewBox="0 0 24 24" class="w-8" astro-icon="mdi:email">
+                  <path
+                    fill="currentColor"
+                    d="M20,18H4V8l8,5l8-5V18z M20,6H4l8,5L20,6z"></path>
+                </svg>
+                 adele@ataahifitness.co.nz
+              </a>
+            </div>
+          </div>
+
+          <h1>
+            So that we can set up a time for you to come through, we are looking
+            forward to seeing you!
+          </h1>
+          <h1>
+            Alternatively, you can send us an email in order to set up a time
+            for you to view.
+          </h1>
+        </div>
+      </div>
+    </div>
+  </section>
+</Layout>

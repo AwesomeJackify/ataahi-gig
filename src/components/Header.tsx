@@ -51,7 +51,7 @@ const Header = ({ pages }: Props) => {
                 key={index}
                 className={
                   page.name === "Join Today"
-                    ? "bg-primary text-white rounded-md"
+                    ? "bg-secondary text-white rounded-md"
                     : ""
                 }
               >
