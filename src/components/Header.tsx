@@ -47,7 +47,14 @@ const Header = ({ pages }: Props) => {
             className={`menu menu-horizontal px-1 gap-6 max-md:w-full text-xl max-md:flex-col`}
           >
             {pages.map((page, index) => (
-              <li key={index}>
+              <li
+                key={index}
+                className={
+                  page.name === "Join Today"
+                    ? "bg-primary text-white rounded-md"
+                    : ""
+                }
+              >
                 <a href={page.url}>{page.name}</a>
               </li>
             ))}
