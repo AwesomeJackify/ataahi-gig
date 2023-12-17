@@ -15,7 +15,7 @@ const Header = ({ pages }: Props) => {
 
   return (
     <div>
-      <div className="flex justify-between items-center max-md:flex-col gap-6 p-4">
+      <div className=" md:h-24 shadow-lg  flex justify-between items-center max-md:flex-col gap-6 p-4">
         <div className="flex justify-between max-md:w-full items-center">
           <a href="/" className="btn btn-ghost h-fit">
             <img
