@@ -72,7 +72,7 @@ const features = [
     </div>
   </section>
 
-  <section class="-mt-20">
+  <section class="">
     <div class="grid grid-cols-3 max-md:grid-cols-1">
       {
         features.map((feature, index) => (
@@ -109,23 +109,37 @@ const features = [
     </div>
   </section>
   <section class="p-10 flex flex-col gap-12 items-center">
-    <div class="flex flex-col gap-6 text-center">
+    <div
+      class="flex flex-col gap-8 text-center items-center justify-center w-full md:w-1/2"
+    >
       <h1 class="text-6xl">Our Mission</h1>
       <p
         class="text-2xl max-md:text-lg leading-loose max-md:leading-loose max-w-4xl mx-auto"
       >
-        Our aim is to promote the benefits of exercise to all groups of people,
-        from neurodiverse to the elderly. We want to create a community that is
-        inclusive and welcoming to all. We want to help people achieve their
-        goals and live a healthier lifestyle.
+        Welcome to <span class="font-bold">Ata Ahi Fitness</span> — where every
+        journey to health and wellness is valued and supported. We believe in
+        the transformative power of fitness for everyone, from neurodiverse
+        individuals to seniors, and everyone in between. Our goal is to foster
+        an inclusive, vibrant community that uplifts and motivates each member
+        to achieve their personal best, promoting a healthier, more fulfilling
+        lifestyle for all.
+      </p>
+      <Image
+        src={communityImg}
+        width={900}
+        class="rounded-2xl w-full max-w-2xl"
+        alt="Community"
+      />
+      <h1 class="text-6xl">Empowering Your Growth</h1>
+      <p class="text-2xl">
+        Life's challenges are unique — whether you're managing anxiety,
+        embracing new parenthood, or exploring your neurodiverse strengths. At
+        Ata Ahi Fitness, we're more than just a gym; we're a sanctuary of
+        support and empowerment. We offer support, classes, personal training
+        and a wholesome enviorment.
       </p>
     </div>
-    <Image
-      src={communityImg}
-      width={900}
-      class="rounded-2xl w-full max-w-2xl"
-      alt="Community"
-    />
+
     <div class="flex flex-col gap-6">
       <h1 class="text-6xl text-center">Pricing</h1>
       <p
