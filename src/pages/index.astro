@@ -9,6 +9,8 @@ import communityImg from "@assets/images/community.jpeg";
 import Map from "@components/Map.astro";
 import { Icon } from "astro-icon";
 
+import heroBGImg from "@assets/images/gym/IMG_09902.jpg";
+
 import amenitiesImg1 from "@assets/images/gym/IMG_0990.jpg";
 import amenitiesImg2 from "@assets/images/gym/IMG_0993.jpg";
 import amenitiesImg3 from "@assets/images/gym/IMG_0996.jpg";
@@ -48,16 +50,20 @@ const features = [
 ---
 
 <Layout title="Ata Ahi Fitness">
-  <section class="flex flex-col items-center gap-6 pt-20 max-md:pt-10">
-    <div class="relative">
-      <div class="text-center flex flex-col gap-6 max-md:gap-2">
-        <h1 class="uppercase text-6xl font-bold max-md:text-2xl">Welcome to</h1>
-        <h1 class="uppercase text-8xl font-bold max-md:text-4xl">
+  <section class="flex flex-col items-center gap-6 pt-20 max-md:pt-10 relative">
+    <div class="py-32 max-md:py-10">
+      <div class="text-center flex flex-col gap-6 max-md:gap-2 text-base-200">
+        <h1
+          class="uppercase text-6xl font-bold max-md:text-2xl z-10 text-base-200"
+        >
+          Welcome to
+        </h1>
+        <h1 class="uppercase text-8xl font-bold max-md:text-4xl z-10">
           Ata Ahi Fitness
         </h1>
-        <h2 class="text-2xl max-md:text-xs">
+        <!-- <h2 class="text-2xl max-md:text-xs z-10">
           Empower your quiet strength in our community of wellness
-        </h2>
+        </h2> -->
       </div>
       <div class="flex flex-col items-center">
         <a
@@ -65,16 +71,26 @@ const features = [
           class="btn btn-primary text-base-100 shadow-2xl btn-wide mt-4 rounded-none text-2xl z-10"
           >Join Us Today</a
         >
-        <Image
+        <!-- <Image
           src={heroImg}
           width={900}
           alt="Ata Ahi Fitness"
           class="-mt-10 w-[900px] max-md:-mt-2"
-        />
+        /> -->
+      </div>
+      <Image
+        src={heroBGImg}
+        width={900}
+        alt="Ata Ahi Fitness"
+        class="absolute top-0 left-0 w-full h-full object-cover"
+      />
+      <div
+        class="absolute top-0 left-0 w-full h-full object-cover bg-gradient-to-r from-primary to-black opacity-[35%]"
+      >
       </div>
     </div>
   </section>
-  <section class="-mt-20">
+  <!-- <section class="">
     <div class="grid grid-cols-3 max-md:grid-cols-1">
       {
         features.map((feature, index) => (
@@ -109,7 +125,7 @@ const features = [
         ))
       }
     </div>
-  </section>
+  </section> -->
   <section class="p-10 flex flex-col gap-12 items-center">
     <div class="flex flex-col gap-6 text-center">
       <h1 class="text-6xl">Our Mission</h1>
@@ -134,9 +150,9 @@ const features = [
       >
         At Ata Ahi we only do flexi-term contracts, this means you pay on a
         monthly basis and can cancel anytime. Our Memberships are <b>$33.00</b>
-         a month, that's it, nothing else to worry about. We also serve daily
-        passes for <b>$10.00</b> for those that are currently visiting or want
-        to try out the gym.
+        a month, that's it, nothing else to worry about. We also serve daily passes
+        for <b>$10.00</b> for those that are currently visiting or want to try out
+        the gym.
       </p>
     </div>
   </section>
@@ -148,8 +164,8 @@ const features = [
             Find us here
           </h1>
           <h2 class="text-3xl max-md:text-2xl">
-            Level 4, Scene One Apartments <br /> 2 Beach Road <br /> Auckland
-            CBD 1010
+            Level 4, Scene One Apartments <br /> 2 Beach Road <br /> Auckland CBD
+            1010
           </h2>
           <a
             href="tel:+640212146247"
@@ -175,11 +191,13 @@ const features = [
             class="w-full h-full object-cover border-l-8 border-t-8 border-b-8 border-secondary"
           >
             <source src="/gym.mov" type="video/mp4" />
-             Your browser does not support the video tag.
+            Your browser does not support the video tag.
           </video>
         </div>
         <div class="swiper-slide">
           <Image
+            width={700}
+            height={700}
             src={amenitiesImg1}
             alt="amenities image"
             class="w-full h-full object-cover border-l-8 border-t-8 border-b-8 border-secondary"
@@ -187,6 +205,8 @@ const features = [
         </div>
         <div class="swiper-slide">
           <Image
+            width={700}
+            height={700}
             src={amenitiesImg2}
             alt="amenities image"
             class="w-full h-full object-cover border-l-8 border-t-8 border-b-8 border-secondary"
@@ -194,6 +214,8 @@ const features = [
         </div>
         <div class="swiper-slide">
           <Image
+            width={700}
+            height={700}
             src={amenitiesImg3}
             alt="amenities image"
             class="w-full h-full object-cover border-l-8 border-t-8 border-b-8 border-secondary"
@@ -201,6 +223,8 @@ const features = [
         </div>
         <div class="swiper-slide">
           <Image
+            width={700}
+            height={700}
             src={amenitiesImg4}
             alt="amenities image"
             class="w-full h-full object-cover border-l-8 border-t-8 border-b-8 border-secondary"
@@ -208,6 +232,8 @@ const features = [
         </div>
         <div class="swiper-slide">
           <Image
+            width={700}
+            height={700}
             src={amenitiesImg5}
             alt="amenities image"
             class="w-full h-full object-cover border-l-8 border-t-8 border-b-8 border-secondary"
@@ -215,6 +241,8 @@ const features = [
         </div>
         <div class="swiper-slide">
           <Image
+            width={700}
+            height={700}
             src={amenitiesImg6}
             alt="amenities image"
             class="w-full h-full object-cover border-l-8 border-t-8 border-b-8 border-secondary"
@@ -222,6 +250,8 @@ const features = [
         </div>
         <div class="swiper-slide">
           <Image
+            width={700}
+            height={700}
             src={amenitiesImg7}
             alt="amenities image"
             class="w-full h-full object-cover border-l-8 border-t-8 border-b-8 border-secondary"
@@ -229,6 +259,8 @@ const features = [
         </div>
         <div class="swiper-slide">
           <Image
+            width={700}
+            height={700}
             src={amenitiesImg8}
             alt="amenities image"
             class="w-full h-full object-cover border-l-8 border-t-8 border-b-8 border-secondary"
@@ -236,6 +268,8 @@ const features = [
         </div>
         <div class="swiper-slide">
           <Image
+            width={700}
+            height={700}
             src={amenitiesImg9}
             alt="amenities image"
             class="w-full h-full object-cover border-l-8 border-t-8 border-b-8 border-secondary"
@@ -243,6 +277,8 @@ const features = [
         </div>
         <div class="swiper-slide">
           <Image
+            width={700}
+            height={700}
             src={amenitiesImg10}
             alt="amenities image"
             class="w-full h-full object-cover border-l-8 border-t-8 border-b-8 border-secondary"
@@ -250,6 +286,8 @@ const features = [
         </div>
         <div class="swiper-slide">
           <Image
+            width={700}
+            height={700}
             src={amenitiesImg11}
             alt="amenities image"
             class="w-full h-full object-cover border-l-8 border-t-8 border-b-8 border-secondary"
@@ -257,6 +295,8 @@ const features = [
         </div>
         <div class="swiper-slide">
           <Image
+            width={700}
+            height={700}
             src={amenitiesImg12}
             alt="amenities image"
             class="w-full h-full object-cover border-8 border-secondary"
