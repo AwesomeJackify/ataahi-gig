@@ -23,6 +23,7 @@ import amenitiesImg9 from "@assets/images/gym/IMG_1019.jpg";
 import amenitiesImg10 from "@assets/images/gym/IMG_1028.jpg";
 import amenitiesImg11 from "@assets/images/gym/IMG_1034.jpg";
 import amenitiesImg12 from "@assets/images/gym/IMG_1037.jpg";
+import PricingCard from "@components/PricingCard.astro";
 
 const features = [
   {
@@ -80,7 +81,7 @@ const features = [
       </div>
       <Image
         src={heroBGImg}
-        width={900}
+        width={1300}
         alt="Ata Ahi Fitness"
         class="absolute top-0 left-0 w-full h-full object-cover"
       />
@@ -126,16 +127,29 @@ const features = [
       }
     </div>
   </section> -->
-  <section class="p-10 flex flex-col gap-12 items-center">
+  <section class="p-10 flex flex-col gap-12 items-center text-black">
     <div class="flex flex-col gap-6 text-center">
-      <h1 class="text-6xl">Our Mission</h1>
-      <p
-        class="text-2xl max-md:text-lg leading-loose max-md:leading-loose max-w-4xl mx-auto"
+      <h1 class="text-6xl text-center">Welcome</h1>
+      <div
+        class="flex items-start justify-center flex-col text-2xl leading-relaxed"
       >
-        We've made our gym a safe and friendly place, so everyone can feel good
-        about working out here. We've got a bunch of great classes too, all to
-        help our members feel better and get healthier.
-      </p>
+        <p class="">
+          <span class="">Ata Ahi Fitness</span> is an inclusive gym located in the
+          heart of <span class="font-bold">Auckland</span> on Beach Road in the CBD.
+        </p>
+        <p class="mt-4">
+          We promote a safe environment for all gym goers to feel safe and grow
+          as individuals.
+        </p>
+        <p>
+          Are equipment consists barbells, dumbbells & cardio machines and much
+          more, all that you need to grow your body and mind!
+        </p>
+        <p>
+          For the full list of amenities click here. We also offer personal
+          training.
+        </p>
+      </div>
     </div>
     <Image
       src={communityImg}
@@ -148,12 +162,19 @@ const features = [
       <p
         class="text-2xl max-md:text-lg leading-loose max-md:leading-loose max-w-4xl mx-auto"
       >
-        At Ata Ahi we only do flexi-term contracts, this means you pay on a
-        monthly basis and can cancel anytime. Our Memberships are <b>$33.00</b>
-        a month, that's it, nothing else to worry about. We also serve daily passes
-        for <b>$10.00</b> for those that are currently visiting or want to try out
-        the gym.
+        We offer fixed 12 months, flexible and daily contracts for our gym.
       </p>
+      <div class="flex gap-4 flex-col md:flex-row items-center">
+        <PricingCard title="Daily" price="$10.00/day" />
+        <PricingCard title="Flexible" price="$26.00/week" />
+        <PricingCard title="12 Month Contract" price="$22.00/week" />
+      </div>
+
+      <a
+        href="/join-us"
+        class="btn btn-secondary text-base-100 shadow-2xl w-full mt-4 rounded-none text-2xl z-10"
+        >Visit Us</a
+      >
     </div>
   </section>
   <section>
