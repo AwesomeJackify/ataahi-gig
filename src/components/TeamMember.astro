@@ -1,3 +1,20 @@
 ---
-const { title } = Astro.props;
+const { fullName, jobTitle, biography, imageSrc, imageAlt } = Astro.props;
+import { Image } from "astro:assets";
 ---
+
+<div class="flex flex-col items-center justify-center gap-4">
+  <Image
+    class="rounded-full w-64 h-64 object-cover bg-black"
+    src={imageSrc}
+    width={500}
+    alt={imageAlt}
+  />
+  <div>
+    <h1 class="font-bold text-xl">{fullName}</h1>
+    <h1 class="">{jobTitle}</h1>
+  </div>
+  <p>
+    {biography}
+  </p>
+</div>
