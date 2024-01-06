@@ -20,7 +20,7 @@ import people from "src/assets/images/gym/IMG_1016.jpg";
         Join us
       </h1>
       <div
-        class="text-2xl max-md:text-xl max-w-screen-lg mx-auto flex flex-col gap-4"
+        class="text-2xl text-center max-md:text-xl max-w-screen-lg mx-auto flex flex-col gap-4"
       >
         <h2>
           Congratulations on your decision to join a gym! The next step is to
@@ -37,7 +37,7 @@ import people from "src/assets/images/gym/IMG_1016.jpg";
         <h2 class="font-bold text-4xl">Give us a ring at</h2>
         <a
           href="tel:+640212146247"
-          class="text-2xl max-md:text-xl flex items-center btn btn-lg w-full md:w-2/3 max-md:h-24 btn-primary"
+          class="text-2xl max-md:text-xl flex items-center btn btn-lg max-md:h-24 btn-primary"
         >
           <svg viewBox="0 0 24 24" class="w-8" astro-icon="mdi:phone">
             <path
@@ -61,11 +61,12 @@ import people from "src/assets/images/gym/IMG_1016.jpg";
             data-netlify="true"
           >
             <div class="flex flex-col gap-2">
-              <label for="email" class="block mb-4 text-sm font-medium"
+              <label for="name" class="block mb-4 text-sm font-medium"
                 >Your Full Name</label
               >
               <input
                 id="name"
+                name="name"
                 class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5"
                 placeholder="Jane Smith"
                 required=""
@@ -75,6 +76,7 @@ import people from "src/assets/images/gym/IMG_1016.jpg";
               >
               <input
                 type="email"
+                name="email"
                 id="email"
                 class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5"
                 placeholder="hi@gmail.com"
@@ -87,6 +89,7 @@ import people from "src/assets/images/gym/IMG_1016.jpg";
               >
               <input
                 type="text"
+                name="phone"
                 id="phone"
                 class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5"
                 placeholder="022-222-2222"
@@ -99,6 +102,7 @@ import people from "src/assets/images/gym/IMG_1016.jpg";
               >
               <textarea
                 id="message"
+                name="message"
                 class="shadow-sm resize-none bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5"
                 placeholder=""
                 required=""></textarea>

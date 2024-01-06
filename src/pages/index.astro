@@ -127,29 +127,16 @@ const features = [
       }
     </div>
   </section> -->
-  <section class="p-10 flex flex-col gap-12 items-center text-black">
+  <section class="p-10 flex flex-col gap-12 items-center">
     <div class="flex flex-col gap-6 text-center">
-      <h1 class="text-6xl text-center">Welcome</h1>
-      <div
-        class="flex items-start justify-center flex-col text-2xl leading-relaxed"
+      <h1 class="text-6xl text-center">Our Mission</h1>
+      <p
+        class="text-2xl max-md:text-lg leading-loose max-md:leading-loose max-w-4xl mx-auto"
       >
-        <p class="">
-          <span class="">Ata Ahi Fitness</span> is an inclusive gym located in the
-          heart of <span class="font-bold">Auckland</span> on Beach Road in the CBD.
-        </p>
-        <p class="mt-4">
-          We promote a safe environment for all gym goers to feel safe and grow
-          as individuals.
-        </p>
-        <p>
-          Are equipment consists barbells, dumbbells & cardio machines and much
-          more, all that you need to grow your body and mind!
-        </p>
-        <p>
-          For the full list of amenities click here. We also offer personal
-          training.
-        </p>
-      </div>
+        We've made our gym a safe and friendly place, so everyone can feel good
+        about working out here. We've got a bunch of great classes too, all to
+        help our members feel better and get healthier.
+      </p>
     </div>
     <Image
       src={communityImg}
@@ -157,24 +144,18 @@ const features = [
       class="rounded-2xl w-full max-w-2xl"
       alt="Community"
     />
-    <div class="flex flex-col gap-6">
-      <h1 class="text-6xl text-center">Pricing</h1>
-      <p
+    <div class="flex flex-col gap-12">
+      <h1 class="text-6xl text-center">Memberships</h1>
+      <!-- <p
         class="text-2xl max-md:text-lg leading-loose max-md:leading-loose max-w-4xl mx-auto"
       >
         We offer fixed 12 months, flexible and daily contracts for our gym.
-      </p>
+      </p> -->
       <div class="flex gap-4 flex-col md:flex-row items-center">
-        <PricingCard title="Daily" price="$10.00/day" />
-        <PricingCard title="Flexible" price="$26.00/week" />
-        <PricingCard title="12 Month Contract" price="$22.00/week" />
+        <PricingCard title="Daily" price="10.00" frequency="day" />
+        <PricingCard title="12 MTH" price="22.00" frequency="day" />
+        <PricingCard title="Flexible" price="26.00" frequency="day" />
       </div>
-
-      <a
-        href="/join-us"
-        class="btn btn-secondary text-base-100 shadow-2xl w-full mt-4 rounded-none text-2xl z-10"
-        >Visit Us</a
-      >
     </div>
   </section>
   <section>
@@ -198,7 +179,7 @@ const features = [
       </div>
     </div>
   </section>
-  <section>
+  <section class="border-y-[32px] border-white max-md:border-y-8">
     <div class="swiper h-96 gallery">
       <div class="swiper-wrapper">
         <div class="swiper-slide">
@@ -209,7 +190,7 @@ const features = [
             autoplay
             muted
             loop
-            class="w-full h-full object-cover border-l-[20px] border-t-[20px] border-b-8border-base-100"
+            class="w-full h-full object-cover"
           >
             <source src="/gym.mov" type="video/mp4" />
             Your browser does not support the video tag.
@@ -221,7 +202,7 @@ const features = [
             height={700}
             src={amenitiesImg1}
             alt="amenities image"
-            class="w-full h-full object-cover border-l-[20px] border-t-[20px] border-b-8border-base-100"
+            class="w-full h-full object-cover"
           />
         </div>
         <div class="swiper-slide">
@@ -230,7 +211,7 @@ const features = [
             height={700}
             src={amenitiesImg2}
             alt="amenities image"
-            class="w-full h-full object-cover border-l-[20px] border-t-[20px] border-b-8border-base-100"
+            class="w-full h-full object-cover"
           />
         </div>
         <div class="swiper-slide">
@@ -239,7 +220,7 @@ const features = [
             height={700}
             src={amenitiesImg3}
             alt="amenities image"
-            class="w-full h-full object-cover border-l-[20px] border-t-[20px] border-b-8border-base-100"
+            class="w-full h-full object-cover"
           />
         </div>
         <div class="swiper-slide">
@@ -248,7 +229,7 @@ const features = [
             height={700}
             src={amenitiesImg4}
             alt="amenities image"
-            class="w-full h-full object-cover border-l-[20px] border-t-[20px] border-b-8border-base-100"
+            class="w-full h-full object-cover"
           />
         </div>
         <div class="swiper-slide">
@@ -257,7 +238,7 @@ const features = [
             height={700}
             src={amenitiesImg5}
             alt="amenities image"
-            class="w-full h-full object-cover border-l-[20px] border-t-[20px] border-b-8border-base-100"
+            class="w-full h-full object-cover"
           />
         </div>
         <div class="swiper-slide">
@@ -266,7 +247,7 @@ const features = [
             height={700}
             src={amenitiesImg6}
             alt="amenities image"
-            class="w-full h-full object-cover border-l-[20px] border-t-[20px] border-b-8border-base-100"
+            class="w-full h-full object-cover"
           />
         </div>
         <div class="swiper-slide">
@@ -275,7 +256,7 @@ const features = [
             height={700}
             src={amenitiesImg7}
             alt="amenities image"
-            class="w-full h-full object-cover border-l-[20px] border-t-[20px] border-b-8border-base-100"
+            class="w-full h-full object-cover"
           />
         </div>
         <div class="swiper-slide">
@@ -284,7 +265,7 @@ const features = [
             height={700}
             src={amenitiesImg8}
             alt="amenities image"
-            class="w-full h-full object-cover border-l-[20px] border-t-[20px] border-b-8border-base-100"
+            class="w-full h-full object-cover"
           />
         </div>
         <div class="swiper-slide">
@@ -293,7 +274,7 @@ const features = [
             height={700}
             src={amenitiesImg9}
             alt="amenities image"
-            class="w-full h-full object-cover border-l-[20px] border-t-[20px] border-b-8border-base-100"
+            class="w-full h-full object-cover"
           />
         </div>
         <div class="swiper-slide">
@@ -302,7 +283,7 @@ const features = [
             height={700}
             src={amenitiesImg10}
             alt="amenities image"
-            class="w-full h-full object-cover border-l-[20px] border-t-[20px] border-b-8 border-base-100"
+            class="w-full h-full object-cover"
           />
         </div>
         <div class="swiper-slide">
@@ -311,7 +292,7 @@ const features = [
             height={700}
             src={amenitiesImg11}
             alt="amenities image"
-            class="w-full h-full object-cover border-l-[20px] border-t-[20px] border-b-8 border-base-100"
+            class="w-full h-full object-cover"
           />
         </div>
         <div class="swiper-slide">
@@ -320,7 +301,7 @@ const features = [
             height={700}
             src={amenitiesImg12}
             alt="amenities image"
-            class="w-full h-full object-cover border-[20px] border-b-8 border-base-100"
+            class="w-full h-full object-cover"
           />
         </div>
       </div>
@@ -328,9 +309,11 @@ const features = [
       <div class="swiper-pagination"></div>
     </div>
   </section>
-  <section class="p-32 max-md:px-6 max-md:py-24">
+  <section
+    class="p-32 max-md:px-6 max-md:py-24 bg-gradient-to-r from-secondary to-primary bg-opacity-30"
+  >
     <div class="flex flex-col items-center gap-8">
-      <h1 class="capitalize text-6xl max-md:text-4xl font-bold">
+      <h1 class="capitalize text-8xl max-md:text-4xl font-bold text-base-100">
         Let's get started
       </h1>
       <a
@@ -361,6 +344,7 @@ const features = [
         slidesPerView: 3,
       },
     },
+    spaceBetween: 40,
     autoplay: {
       delay: 5000,
       disableOnInteraction: true,
