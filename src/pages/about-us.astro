@@ -3,6 +3,7 @@ import { Image } from "astro:assets";
 import Layout from "src/layouts/Layout.astro";
 import people from "src/assets/images/people-smiling.jpg";
 import heroBGImg from "@assets/images/gym/IMG_09902.jpg";
+import helicson from "@assets/images/helicson.jpeg";
 ---
 
 <Layout title="About us">
@@ -38,7 +39,7 @@ import heroBGImg from "@assets/images/gym/IMG_09902.jpg";
   </section>
 
   <section class="p-10 flex flex-col gap-12 items-center">
-    <div class="bg-base-100 h-screen">
+    <div class="bg-base-100 min-h-screen">
       <div class="flex flex-col gap-6">
         <div class="mt-8 flex-col text-2xl leading-relaxed">
           <p class="">
@@ -61,6 +62,24 @@ import heroBGImg from "@assets/images/gym/IMG_09902.jpg";
         >
           Meet our team
         </h1>
+        <div class="grid grid-cols-3">
+          <div class="flex flex-col items-center justify-center gap-4">
+            <Image
+              class="rounded-full w-64 h-64 object-cover bg-black"
+              src={helicson}
+              width={500}
+              alt={"Personal Trainer at gym"}
+            />
+            <div>
+              <h1 class="font-bold text-xl">Helicson Yoohiro Fujuita</h1>
+              <h1 class="">Personal Trainer</h1>
+            </div>
+            <p>
+              With over 15 years of experience in personal training, Helicson is
+              a expert in helping people of all backgerounds reach their goals
+            </p>
+          </div>
+        </div>
       </div>
     </div>
   </section>
