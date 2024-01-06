@@ -61,11 +61,13 @@ import TeamMember from "@components/TeamMember.astro";
           <p>Sunday: 5am-10pm</p>
         </div>
         <h1
-          class="capitalize text-6xl text-center max-md:text-4xl font-bold text-black"
+          class="capitalize text-6xl text-center max-md:text-4xl font-bold text-black mt-8"
         >
           Meet our team
         </h1>
-        <div class="flex justify-center items-center mt-8">
+        <div
+          class="flex flex-col sm:flex-row justify-evenly items-center mt-8 pb-32"
+        >
           <!-- TEAM MEM 1 -->
           <div class="flex flex-col items-center justify-center gap-4">
             <Image
@@ -78,13 +80,15 @@ import TeamMember from "@components/TeamMember.astro";
               <h1 class="font-bold text-xl">Helicson Yoohiro Fujuita</h1>
               <h1 class="">Personal Trainer</h1>
             </div>
-            <p>
+            <p class="md:w-64">
               With over 15 years of experience in personal training, Helicson is
               a expert in helping people of all backgerounds reach their goals
             </p>
           </div>
           <!-- TEAM MEM 2 -->
-          <div class="flex flex-col items-center justify-center gap-4">
+          <div
+            class="mt-16 sm:mt-0 flex flex-col items-center justify-center gap-4"
+          >
             <Image
               class="rounded-full w-64 h-64 object-cover bg-black"
               src={adele}
@@ -95,7 +99,7 @@ import TeamMember from "@components/TeamMember.astro";
               <h1 class="font-bold text-xl">Adele Tara</h1>
               <h1 class="">Owner & Wellbeing Coach</h1>
             </div>
-            <p>
+            <p class="md:w-64">
               From a kickboxing enthusiast to a devoted fitness instructor,
               Adele's transformative journey reflects her passion for empowering
               others to find confidence through exercise.
