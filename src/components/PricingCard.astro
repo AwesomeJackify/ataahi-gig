@@ -1,14 +1,14 @@
 ---
-const { title, price } = Astro.props;
+const { title, price, frequency } = Astro.props;
 ---
 
-<div
-  class="bg-white border w-full justify-start shadow-sm h-48 rounded-md flex flex-col items-center"
->
-  <div
-    class="bg-black p-8 text-white w-full h-8 flex items-center justify-center"
-  >
-    <h1 class="text-2xl">{title}</h1>
+<div class="w-96 shadow-2xl">
+  <h2 class="text-center uppercase py-4 text-base-100 text-6xl bg-primary">
+    {title}
+  </h2>
+  <div class="flex justify-center text-secondary py-8 bg-slate-100">
+    <p class="text-2xl">$</p>
+    <p class="text-6xl">{price}</p>
+    <p class="self-end text-2xl">per {frequency}</p>
   </div>
-  <h1 class="mt-16">{price}</h1>
 </div>
