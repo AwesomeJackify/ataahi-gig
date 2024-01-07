@@ -1,26 +1,46 @@
 ---
 import { Image } from "astro:assets";
 import Layout from "src/layouts/Layout.astro";
-import people from "src/assets/images/gym/IMG_1016.jpg";
+import heroBGImg from "src/assets/images/gym/IMG_1016.jpg";
 ---
 
 <Layout title="Join Us">
   <div class="flex flex-col gap-20 pb-20 px-2">
-    <section class="flex flex-col items-center gap-6 px-2">
-      <Image
-        class="max-w-screen-md w-full rounded-md shadow-lg"
-        src={people}
-        alt="People smiling"
-        width={700}
-        height={700}
-      />
+    <section
+      class="flex flex-col items-center gap-6 pt-20 max-md:pt-10 relative"
+    >
+      <div class="py-32 max-md:py-10">
+        <div class="text-center flex flex-col gap-6 max-md:gap-2 text-base-200">
+          <h1 class="uppercase text-8xl font-bold max-md:text-4xl z-10">
+            Join Us
+          </h1>
+          <!-- <h2 class="text-2xl max-md:text-xs z-10">
+            Empower your quiet strength in our community of wellness
+          </h2> -->
+        </div>
+        <div class="flex flex-col items-center">
+          <!-- <Image
+            src={heroImg}
+            width={900}
+            alt="Ata Ahi Fitness"
+            class="-mt-10 w-[900px] max-md:-mt-2"
+          /> -->
+        </div>
+        <Image
+          src={heroBGImg}
+          width={1300}
+          alt="Ata Ahi Fitness"
+          class="absolute top-0 left-0 w-full h-full object-cover"
+        />
+        <div
+          class="absolute top-0 left-0 w-full h-full object-cover bg-gradient-to-r from-primary to-black opacity-[35%]"
+        >
+        </div>
+      </div>
     </section>
     <section class="flex flex-col justify-center items-center gap-8">
-      <h1 class="capitalize text-center text-8xl font-bold max-md:text-6xl">
-        Join us
-      </h1>
       <div
-        class="text-2xl text-center max-md:text-xl max-w-screen-lg mx-auto flex flex-col gap-4"
+        class="text-2xl max-md:text-xl max-w-screen-lg mx-auto flex flex-col gap-4"
       >
         <h2>
           Congratulations on your decision to join a gym! The next step is to
@@ -31,28 +51,27 @@ import people from "src/assets/images/gym/IMG_1016.jpg";
       </div>
     </section>
     <section
-      class="grid grid-cols-2 items-center justify-center text-center max-w-screen-xl mx-auto max-md:grid-cols-1 max-md:gap-20"
+      class="flex items-center justify-center text-center max-w-screen-xl mx-auto max-md:grid-cols-1 max-md:gap-20"
     >
-      <div class="flex flex-col items-center gap-4">
-        <h2 class="font-bold text-4xl">Give us a ring at</h2>
-        <a
-          href="tel:+640212146247"
-          class="text-2xl max-md:text-xl flex items-center btn btn-lg max-md:h-24 btn-primary"
-        >
-          <svg viewBox="0 0 24 24" class="w-8" astro-icon="mdi:phone">
-            <path
-              fill="currentColor"
-              d="M6.62 10.79c1.44 2.83 3.76 5.15 6.59 6.59l2.2-2.2c.28-.28.67-.36 1.02-.25 1.12.37 2.32.57 3.57.57a1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"
-            ></path>
-          </svg>
-          +64 022 355 4721
-        </a>
-      </div>
-
       <div class="flex flex-col gap-6">
         <h2 class="text-3xl max-md:text-2xl">
-          Or fill in this form and we will contact you back within 48 hours
+          Fill in the form and we will contact you back within 48 hours
         </h2>
+        <div class="flex flex-col items-center gap-4">
+          <h2 class="font-bold text-3xl">Or phone us at</h2>
+          <a
+            href="tel:+640212146247"
+            class="text-2xl max-md:text-xl flex items-center btn btn-lg max-md:h-12 btn-primary"
+          >
+            <svg viewBox="0 0 24 24" class="w-8" astro-icon="mdi:phone">
+              <path
+                fill="currentColor"
+                d="M6.62 10.79c1.44 2.83 3.76 5.15 6.59 6.59l2.2-2.2c.28-.28.67-.36 1.02-.25 1.12.37 2.32.57 3.57.57a1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"
+              ></path>
+            </svg>
+            +64 022 355 4721
+          </a>
+        </div>
         <div id="" class="px-4 mx-auto w-full md:w-2/3">
           <form
             method="POST"
@@ -60,50 +79,46 @@ import people from "src/assets/images/gym/IMG_1016.jpg";
             name="contact"
             data-netlify="true"
           >
-            <div class="flex flex-col gap-2">
-              <label for="name" class="block mb-4 text-sm font-medium"
-                >Your Full Name</label
+            <div class="flex flex-col items-start gap-2">
+              <label for="name" class="block text-sm font-medium"
+                >Full Name</label
               >
               <input
                 id="name"
                 name="name"
-                class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5"
+                class="shadow-sm mb-2 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5"
                 placeholder="Jane Smith"
                 required=""
               />
-              <label for="email" class="block mb-4 text-sm font-medium"
-                >Your email</label
-              >
+              <label for="email" class="block text-sm font-medium">Email</label>
               <input
                 type="email"
                 name="email"
                 id="email"
-                class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5"
+                class="shadow-sm mb-2 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5"
                 placeholder="hi@gmail.com"
                 required=""
               />
-            </div>
-            <div>
-              <label for="phone" class="block mb-4 text-sm font-medium"
-                >Your number</label
+
+              <label for="phone" class="block text-sm font-medium"
+                >Phone Number</label
               >
               <input
                 type="text"
                 name="phone"
                 id="phone"
-                class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5"
+                class="shadow-sm mb-2 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5"
                 placeholder="022-222-2222"
                 required=""
               />
-            </div>
-            <div>
-              <label for="message" class="block mb-4 text-sm font-medium"
-                >Your message</label
+
+              <label for="message" class="block text-sm font-medium"
+                >When are you available?</label
               >
               <textarea
                 id="message"
                 name="message"
-                class="shadow-sm resize-none bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5"
+                class="shadow-sm mb-2 resize-none bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5"
                 placeholder=""
                 required=""></textarea>
             </div>
