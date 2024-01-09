@@ -2,6 +2,7 @@
 import { Image } from "astro:assets";
 import Layout from "src/layouts/Layout.astro";
 import people from "src/assets/images/people-smiling.jpg";
+import cuteImg from "@assets/images/cute.jpg";
 import heroBGImg from "@assets/images/gym/IMG_0996NOISE.png";
 import helicson from "@assets/images/helicson.jpeg";
 import adele from "@assets/images/adelCROP2.jpg";
@@ -39,76 +40,85 @@ import adele from "@assets/images/adelCROP2.jpg";
     </div>
   </section>
 
-  <section class="p-10 flex flex-col gap-12 items-center">
-    <div class="bg-base-100 min-h-screen">
-      <div class="flex flex-col gap-6">
-        <div class="mt-8 flex-col text-2xl leading-relaxed">
-          <p class="">
-            We're a people-focused gym in downtown Auckland, established late
-            2023.
-          </p>
-          <p class="mt-4">We strive to help you achieve your goals</p>
-          <p>Open 6 days a week.</p>
-        </div>
-        <div class="flex flex-col gap-2 font-bold">
-          <p>Monday: 5am-10pm</p>
-          <p>Tuesday: 5am-10pm</p>
-          <p>Wednesday: 5am-10pm</p>
-          <p>Thursday: 5am-10pm</p>
-          <p>Friday: 5am-10pm</p>
-          <p>Saturday: Closed</p>
-          <p>Sunday: 5am-10pm</p>
-        </div>
-        <h1
-          class="capitalize text-6xl text-center max-md:text-4xl font-bold text-black mt-8"
-        >
-          Meet our team
-        </h1>
-        <div
-          class="flex flex-col items-start sm:flex-row justify-evenly mt-8 pb-32"
-        >
-          <!-- TEAM MEM 1 -->
-          <div class="flex h-full flex-col items-center justify-center gap-4">
-            <Image
-              class="rounded-full w-64 h-64 object-cover bg-black"
-              src={helicson}
-              width={500}
-              alt={"Personal Trainer at gym"}
-            />
-            <div>
-              <h1 class="font-bold text-xl">Hélicson Yoohiro Fujita</h1>
-              <h1 class="">Personal Trainer</h1>
-            </div>
-            <p class="md:w-64">
-              With over 15 years of experience in personal training, Helicson is
-              a expert in helping people of all backgrounds grow. He has
-              extensive experience in working on mobility, strength and
-              conditioning, aswell as helping people with physical disablilties.
+  <div class="flex flex-col gap-20 pb-20 px-2">
+    <section class="flex flex-col gap-12 items-center">
+      <div class="bg-base-100 min-h-screen">
+        <div class="flex flex-col gap-6">
+          <div class="mt-8 flex-col text-2xl leading-relaxed">
+            <p class="">
+              We're a people-focused gym in downtown Auckland, established late
+              2023.
             </p>
+            <p class="mt-4">We strive to help you achieve your goals</p>
+            <p>Open 6 days a week.</p>
           </div>
-          <!-- TEAM MEM 2 -->
-          <div
-            class="mt-16 sm:mt-0 flex flex-col items-center justify-center gap-4"
+          <div class="flex flex-col gap-2 font-bold">
+            <p>Monday: 5am-10pm</p>
+            <p>Tuesday: 5am-10pm</p>
+            <p>Wednesday: 5am-10pm</p>
+            <p>Thursday: 5am-10pm</p>
+            <p>Friday: 5am-10pm</p>
+            <p>Saturday: Closed</p>
+            <p>Sunday: 5am-10pm</p>
+          </div>
+          <h1
+            class="capitalize text-6xl text-center max-md:text-4xl font-bold text-black mt-8"
           >
-            <Image
-              class="rounded-full w-64 h-64 object-cover bg-black"
-              src={adele}
-              width={500}
-              alt={"Owner of Gym Adele"}
-            />
-            <div>
-              <h1 class="font-bold text-xl">Adele Tara</h1>
-              <h1 class="">Owner & Wellbeing Coach</h1>
+            Meet our team
+          </h1>
+          <div
+            class="flex flex-col items-start sm:flex-row justify-evenly mt-8"
+          >
+            <!-- TEAM MEM 1 -->
+            <div class="flex h-full flex-col items-center justify-center gap-4">
+              <Image
+                class="rounded-full w-64 h-64 object-cover bg-black"
+                src={helicson}
+                width={500}
+                alt={"Personal Trainer at gym"}
+              />
+              <div>
+                <h1 class="font-bold text-xl">Hélicson Yoohiro Fujita</h1>
+                <h1 class="">Personal Trainer</h1>
+              </div>
+              <p class="md:w-64">
+                With over 15 years of experience in personal training, Helicson
+                is a expert in helping people of all backgrounds grow. He has
+                extensive experience in working on mobility, strength and
+                conditioning, aswell as helping people with physical
+                disablilties.
+              </p>
             </div>
-            <p class="md:w-64">
-              From a boxing enthusiast to a devoted gym owner, Adele is
-              dedicated to creating a safe and welcoming environment for all.
-              Born in central Auckland and a city-slicker for many years, Adele
-              is passionate about seeing her local community thrive.
-            </p>
+            <!-- TEAM MEM 2 -->
+            <div
+              class="mt-16 sm:mt-0 flex flex-col items-center justify-center gap-4"
+            >
+              <Image
+                class="rounded-full w-64 h-64 object-cover bg-black"
+                src={adele}
+                width={500}
+                alt={"Owner of Gym Adele"}
+              />
+              <div>
+                <h1 class="font-bold text-xl">Adele Tara</h1>
+                <h1 class="">Owner & Wellbeing Coach</h1>
+              </div>
+              <p class="md:w-64">
+                From a boxing enthusiast to a devoted gym owner, Adele is
+                dedicated to creating a safe and welcoming environment for all.
+                Born in central Auckland and a city-slicker for many years,
+                Adele is passionate about seeing her local community thrive.
+              </p>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
+    <section class="flex flex-col items-center gap-6">
+      <Image src={cuteImg} width={500} alt={"Cute"} class="rounded-2xl" />
+      <p class="text-2xl font-light text-center">
+        End of a long day but the smiles are still going strong
+      </p>
+    </section>
+  </div>
 </Layout>
