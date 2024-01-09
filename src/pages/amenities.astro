@@ -2,6 +2,7 @@
 import Layout from "../layouts/Layout.astro";
 import { Image } from "astro:assets";
 import Icon from "astro-icon";
+import heroBGImg from "src/assets/images/gym/IMG_1016.jpg";
 
 const amenities = [
   {
@@ -104,34 +105,59 @@ const amenities = [
 ---
 
 <Layout title="Amenities">
-  <section>
-    <div class="flex flex-col items-center gap-6 py-20 max-md:py-10 px-2">
-      <div class="flex flex-col gap-24 max-md:gap-12">
-        <h1 class="capitalize text-center text-8xl font-bold max-md:text-6xl">
-          What we have to offer
-        </h1>
+  <div class="flex flex-col gap-24 max-md:gap-12 py-20">
+    <section
+      class="flex flex-col items-center gap-6 pt-20 max-md:pt-10 relative"
+    >
+      <div class="py-32 max-md:py-10">
+        <div class="text-center flex flex-col gap-6 max-md:gap-2 text-base-200">
+          <h1 class="uppercase text-8xl font-bold max-md:text-4xl z-10">
+            What we have to offer
+          </h1>
+          <!-- <h2 class="text-2xl max-md:text-xs z-10">
+            Empower your quiet strength in our community of wellness
+          </h2> -->
+        </div>
+        <div class="flex flex-col items-center">
+          <!-- <Image
+            src={heroImg}
+            width={900}
+            alt="Ata Ahi Fitness"
+            class="-mt-10 w-[900px] max-md:-mt-2"
+          /> -->
+        </div>
+        <Image
+          src={heroBGImg}
+          width={1300}
+          alt="Ata Ahi Fitness"
+          class="absolute top-0 left-0 w-full h-full object-cover"
+        />
         <div
-          class="grid grid-cols-3 max-md:grid-cols-2 gap-6 max-lg:grid-cols-3 mx-auto"
+          class="absolute top-0 left-0 w-full h-full object-cover bg-gradient-to-r from-primary to-black opacity-[35%]"
         >
-          {
-            amenities.map((amenity) => (
-              <div class="flex flex-col gap-4">
-                <div class="flex items-center gap-2">
-                  <Icon name={amenity.icon} class="w-8" />
-                  <h1 class="capitalize text-2xl">{amenity.category}</h1>
-                </div>
-                <ul class="mt-2">
-                  {amenity.items.map((item) => (
-                    <li class="capitalize list-disc ml-4">{item}</li>
-                  ))}
-                </ul>
-              </div>
-            ))
-          }
         </div>
       </div>
-    </div>
-  </section>
+    </section>
+    <section
+      class="grid grid-cols-3 max-md:grid-cols-2 gap-6 max-lg:grid-cols-3 mx-auto px-2"
+    >
+      {
+        amenities.map((amenity) => (
+          <div class="flex flex-col gap-4">
+            <div class="flex items-center gap-2">
+              <Icon name={amenity.icon} class="w-8" />
+              <h1 class="capitalize text-2xl">{amenity.category}</h1>
+            </div>
+            <ul class="mt-2">
+              {amenity.items.map((item) => (
+                <li class="capitalize list-disc ml-4">{item}</li>
+              ))}
+            </ul>
+          </div>
+        ))
+      }
+    </section>
+  </div>
 </Layout>
 
 <script>
