@@ -6,6 +6,7 @@ import amenitiesImg from "@assets/images/amenities.jpg";
 import classesImg from "@assets/images/classes.jpeg";
 import forWomenImg from "@assets/images/forWomen.webp";
 import communityImg from "@assets/images/community.jpeg";
+import cuteImg from "@assets/images/cute.jpg";
 import Map from "@components/Map.astro";
 import { Icon } from "astro-icon";
 
@@ -138,12 +139,12 @@ const features = [
         help our members feel better and get healthier.
       </p>
     </div>
-    <Image
-      src={communityImg}
-      width={900}
-      class="rounded-2xl w-full max-w-2xl"
-      alt="Community"
-    />
+    <section class="flex flex-col items-center gap-6">
+      <Image src={cuteImg} width={500} alt={"Cute"} class="rounded-2xl" />
+      <p class="text-xl italic font-light text-center">
+        End of a long day but the smiles are still going strong
+      </p>
+    </section>
     <div class="flex flex-col gap-12">
       <h1 class="text-6xl text-center">Memberships</h1>
       <!-- <p
