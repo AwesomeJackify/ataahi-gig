@@ -1,14 +1,42 @@
 ---
-const { title, price, frequency } = Astro.props;
+const { title, price, frequency, features, couplesPrice, description } =
+  Astro.props;
 ---
 
-<div class="w-96 shadow-2xl">
+<div class="w-96 max-md:w-full shadow-2xl bg-slate-100 h-fit">
   <h2 class="text-center uppercase py-4 text-base-100 text-6xl bg-primary">
     {title}
   </h2>
-  <div class="flex justify-center text-secondary py-8 bg-slate-100">
-    <p class="text-2xl">$</p>
-    <p class="text-6xl">{price}</p>
-    <p class="self-end text-2xl">per {frequency}</p>
+  <div class="flex flex-col items-center gap-6 text-secondary py-8 px-2">
+    <div class="flex w-full justify-center">
+      <div class="text-2xl">$</div>
+      <p class="text-6xl">{price}</p>
+      <p class="self-end text-2xl">per {frequency}</p>
+    </div>
+
+    {
+      couplesPrice && (
+        <div class="flex flex-col items-center">
+          <div class="flex w-full justify-center">
+            <p class="text-2xl">$</p>
+            <p class="text-6xl">{couplesPrice}</p>
+            <p class="self-end text-2xl">per {frequency}</p>
+          </div>
+          <p>(couples price per person)</p>
+        </div>
+      )
+    }
+
+    {description && <p class="text-lg font-light text-center">{description}</p>}
+
+    {
+      features && (
+        <div class="flex flex-col gap-1">
+          {features.map((feature: any) => (
+            <p class="text-xl text-center capitalize">{feature}</p>
+          ))}
+        </div>
+      )
+    }
   </div>
 </div>

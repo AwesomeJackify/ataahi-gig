@@ -6,6 +6,14 @@ export default {
   },
   plugins: [require("daisyui")],
   daisyui: {
-    themes: ["winter", "valentine"],
+    themes: [
+      {
+        winter: {
+          ...require("daisyui/src/theming/themes")["winter"],
+          primary: "#00A799",
+        },
+      },
+      "valentine",
+    ],
   },
 };
