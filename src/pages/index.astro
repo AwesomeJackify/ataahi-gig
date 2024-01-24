@@ -53,7 +53,7 @@ const features = [
 
 <Layout title="Ata Ahi Fitness">
   <section class="flex flex-col items-center gap-6 pt-20 max-md:pt-10 relative">
-    <div class="py-32 max-md:py-10">
+    <div class="py-44 max-md:py-10">
       <div class="text-center flex flex-col gap-6 max-md:gap-2 text-base-200">
         <h1
           class="uppercase text-6xl font-bold max-md:text-2xl z-10 text-base-200"
@@ -128,16 +128,28 @@ const features = [
       }
     </div>
   </section> -->
-  <section class="p-10 flex flex-col gap-12 items-center">
-    <div class="flex flex-col gap-6 text-center">
-      <h1 class="text-6xl text-center">Our Mission</h1>
-      <p
-        class="text-2xl max-md:text-lg leading-loose max-md:leading-loose max-w-4xl mx-auto"
-      >
-        We've made our gym a safe and friendly place, so everyone can feel good
-        about working out here. We've got a bunch of great classes too, all to
-        help our members feel better and get healthier.
-      </p>
+  <section class="py-10 px-4 flex flex-col gap-12 items-center">
+    <div class="flex flex-col gap-12 max-md:gap-6 text-center">
+      <h1 class="text-6xl text-center max-md:text-4xl">NAU MAI, HAERE MAI</h1>
+
+      <div class="flex flex-col max-w-screen-lg mx-auto gap-6">
+        <h1 class="text-4xl max-md:text-3xl text-center">
+          Ia Orāna, Welcome to Ata Ahi Fitness & Wellbeing
+        </h1>
+
+        <p class="text-xl">
+          Our members enjoy a quiet, uncrowded, chilled vibe in our gym studio
+          with access to the complex's heated indoor lap pool (25m) and rooftop
+          tennis court. You'll notice that our coaches genuinely care about our
+          clients and never try to do the 'hard sell' on anyone. If we don't
+          think we're the right fit for you, we'll suggest a gym that is.
+        </p>
+        <p class="text-xl">
+          Besides our group fitness sessions, bootcamps and masterclasses, our
+          <i><b>Move Better, Flex Well</b></i> clinic offers a free assessment for
+          those with limited mobility, range of motion or old injuries.
+        </p>
+      </div>
     </div>
     <div class="flex flex-col items-center gap-6">
       <Image src={cuteImg} width={500} alt={"Cute"} class="rounded-2xl" />
@@ -147,52 +159,82 @@ const features = [
     </div>
   </section>
   <section class="px-2 py-10">
-    <div class="flex flex-col gap-12 items-center">
-      <h1 class="text-6xl text-center">Memberships</h1>
+    <div class="flex flex-col gap-12 items-center w-full">
+      <div class="flex flex-col text-center gap-6 max-w-screen-lg">
+        <h1 class="text-6xl text-center">Memberships</h1>
+        <p class="text-center text-xl font-light">
+          Includes member access to the swimming pool and tennis court, group
+          fitness classes and discounted rates to our masterclass series.<br
+          /><br /> If you don't see a term membership that suits your own timeframe,
+          please contact us to discuss whether we can package something suitable
+          for you.
+        </p>
+      </div>
       <!-- <p
         class="text-2xl max-md:text-lg leading-loose max-md:leading-loose max-w-4xl mx-auto"
       >
         We offer fixed 12 months, flexible and daily contracts for our gym.
       </p> -->
-      <div class="grid grid-cols-2 max-md:grid-cols-1 gap-8">
-        <PricingCard
-          title="Casual Daily"
-          price="15/20"
-          frequency="day"
-          features={["$15 for gym or pool only", "$20 for pool and gym"]}
-        />
-        <PricingCard
-          title="Casual Weekly"
-          price="80"
-          frequency="week"
-          features={["gym", "pool"]}
-        />
+      <div class="grid grid-cols-2 max-md:grid-cols-1 gap-12 max-md:w-full">
         <PricingCard
           title="3 MTH"
-          price="27.50"
-          couplesPrice="27"
+          price="26.50"
+          couplesPrice="25"
           frequency="week"
-          features={["gym", "pool"]}
         />
         <PricingCard
           title="6 MTH"
-          price="26"
-          couplesPrice="25"
+          price="25"
+          couplesPrice="23.50"
           frequency="week"
-          features={["gym", "pool"]}
         />
         <PricingCard
           title="Flexi-term"
-          price="29.50"
+          price="29"
           frequency="week"
-          description="$20 joining fee with 4 weeks minimum. Cancel anytime"
-          features={["gym", "pool"]}
+          description="No joining fee with 6 weeks minimum. Cancel anytime with 2 weeks notice"
+        />
+        <PricingCard
+          title="Students"
+          price="20"
+          frequency="week"
+          description="12 months minimum. Can pause for 9 weeks per year."
         />
       </div>
-      <p class="text-center text-2xl font-light">
-        All memberships include group fitness classes (except the Cook Islands
-        dance classes)
-      </p>
+
+      <div class="flex flex-col gap-6">
+        <h1 class="text-3xl text-center font-light">
+          Looking for more savings? Check out our upfront payment options!
+        </h1>
+        <div class="grid grid-cols-2 gap-12 max-md:grid-cols-1">
+          <PricingCard title="3 MTH upfront" price="325" frequency="3 months" />
+          <PricingCard title="6 MTH upfront" price="600" frequency="6 months" />
+          <PricingCard
+            title="12 MTH upfront"
+            price="1000"
+            frequency="12 months"
+          />
+        </div>
+      </div>
+      <div class="flex flex-col gap-4 max-w-screen-lg items-center">
+        <p class="text-center text-2xl font-light">
+          Casual rates available, please call to enquire. If you require a
+          fixed-term membership (which isn't listed here) please contact us to
+          discuss.
+        </p>
+        <!-- <p class="text-center text-2xl font-light">
+          All memberships include group fitness classes (except the Cook Islands
+          dance classes)
+        </p> -->
+        <p class="text-center text-xl font-light">
+          Terms & Conditions apply to all our memberships.
+        </p>
+        <a
+          href="/join-us"
+          class="btn btn-primary text-base-100 shadow-2xl btn-wide mt-4 rounded-none text-2xl z-10"
+          >Contact Us</a
+        >
+      </div>
     </div>
   </section>
   <section>
