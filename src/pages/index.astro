@@ -112,7 +112,33 @@ const features = [
       </div>
     </div>
     <div class="flex flex-col items-center gap-6">
-      <Image src={cuteImg} width={500} alt={"Cute"} class="rounded-2xl" />
+      <div class="flex relative">
+        <div
+          class="flex justify-evenly flex-col absolute top-0 left-0 w-full h-full"
+        >
+          <Icon
+            class="intro-emojis w-32 max-md:w-20 relative md:-left-24 translate-x-32 max-md:-translate-x-32"
+            name="twemoji:flexed-biceps "
+          />
+          <Icon
+            class="intro-emojis w-32 max-md:w-20 self-end relative md:-right-24 right-0 max-md:translate-x-32 -translate-x-32"
+            name="twemoji:running-shoe"
+          />
+          <Icon
+            class="intro-emojis w-32 max-md:w-20 relative md:-left-24 translate-x-32 max-md:-translate-x-32"
+            name="twemoji:person-swimming"
+          />
+        </div>
+
+        <Image
+          src={cuteImg}
+          width={500}
+          alt={"Cute"}
+          id="intro-img"
+          class="rounded-2xl md:z-10"
+        />
+      </div>
+
       <p class="text-xl italic font-light text-center">
         End of a long day but the smiles are still going strong
       </p>
@@ -362,67 +388,101 @@ const features = [
       >
     </div>
   </section>
-</Layout>
 
-<script>
-  import { gsap } from "gsap";
-  import SplitType from "split-type";
+  <script>
+    import { gsap } from "gsap";
+    import { ScrollTrigger } from "gsap/ScrollTrigger";
+    import SplitType from "split-type";
+    import Lenis from "@studio-freight/lenis";
 
-  const text = new SplitType("#hero-text");
+    gsap.registerPlugin(ScrollTrigger);
 
-  // default char styles in main.css
+    // smooth scroll
+    const lenis = new Lenis();
 
-  var heroTimeline = gsap.timeline();
+    lenis.on("scroll", (e: any) => {
+      console.log(e);
+    });
 
-  heroTimeline
-    .to(".char", {
-      y: 0,
-      duration: 0.1,
-      stagger: 0.05,
-      delay: 0.2,
-    })
-    .to("#hero-img", {
-      opacity: 1,
-      duration: 0.5,
-    })
-    .to(
-      "#hero-cta",
-      {
+    lenis.on("scroll", ScrollTrigger.update);
+
+    gsap.ticker.add((time) => {
+      lenis.raf(time * 1000);
+    });
+
+    gsap.ticker.lagSmoothing(0);
+
+    const text = new SplitType("#hero-text");
+
+    // default char styles in main.css
+
+    var heroTimeline = gsap.timeline();
+
+    heroTimeline
+      .to(".char", {
+        y: 0,
+        duration: 0.1,
+        stagger: 0.05,
+        delay: 0.2,
+      })
+      .to("#hero-img", {
         opacity: 1,
         duration: 0.5,
-      },
-      "<"
-    );
-</script>
+      })
+      .to(
+        "#hero-cta",
+        {
+          opacity: 1,
+          duration: 0.5,
+        },
+        "<"
+      );
 
-<script>
-  // import Swiper bundle with all modules installed
-  import Swiper from "swiper/bundle";
+    var introTimeline = gsap.timeline({
+      scrollTrigger: {
+        trigger: "#intro-img",
+        start: "top center",
+        end: "center center",
+        scrub: true,
+      },
+    });
 
-  // import styles bundle
-  import "swiper/css/bundle";
+    introTimeline.to(".intro-emojis", {
+      translateX: "0",
+      rotate: "25deg",
+      stagger: 0.5,
+    });
+  </script>
 
-  const swiper = new Swiper(".gallery", {
-    breakpoints: {
-      640: {
-        slidesPerView: 1,
+  <script>
+    // import Swiper bundle with all modules installed
+    import Swiper from "swiper/bundle";
+
+    // import styles bundle
+    import "swiper/css/bundle";
+
+    const swiper = new Swiper(".gallery", {
+      breakpoints: {
+        640: {
+          slidesPerView: 1,
+        },
+        768: {
+          slidesPerView: 2,
+        },
+        1024: {
+          slidesPerView: 3,
+        },
       },
-      768: {
-        slidesPerView: 2,
+      spaceBetween: 40,
+      autoplay: {
+        delay: 5000,
+        disableOnInteraction: true,
+        pauseOnMouseEnter: true,
       },
-      1024: {
-        slidesPerView: 3,
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
       },
-    },
-    spaceBetween: 40,
-    autoplay: {
-      delay: 5000,
-      disableOnInteraction: true,
-      pauseOnMouseEnter: true,
-    },
-    pagination: {
-      el: ".swiper-pagination",
-      clickable: true,
-    },
-  });
-</script>
+    });
+  </script>
+</Layout>
