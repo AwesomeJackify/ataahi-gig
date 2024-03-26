@@ -60,12 +60,12 @@ const features = [
         >
           Welcome to
         </h1>
-        <h1 class="uppercase text-8xl font-bold max-md:text-4xl z-10">
+        <h1
+          id="hero-text"
+          class="uppercase text-8xl font-bold max-md:text-4xl z-10 overflow-hidden"
+        >
           Ata Ahi Fitness
         </h1>
-        <!-- <h2 class="text-2xl max-md:text-xs z-10">
-          Empower your quiet strength in our community of wellness
-        </h2> -->
       </div>
       <div class="flex flex-col items-center">
         <a
@@ -73,18 +73,13 @@ const features = [
           class="btn btn-primary text-base-100 shadow-2xl btn-wide mt-4 rounded-none text-2xl z-10"
           >Join Us Today</a
         >
-        <!-- <Image
-          src={heroImg}
-          width={900}
-          alt="Ata Ahi Fitness"
-          class="-mt-10 w-[900px] max-md:-mt-2"
-        /> -->
       </div>
       <Image
+        id="hero-img"
         src={heroBGImg}
         width={1300}
         alt="Ata Ahi Fitness"
-        class="absolute top-0 left-0 w-full h-full object-cover"
+        class="opacity-0 absolute top-0 left-0 w-full h-full object-cover"
       />
       <div
         class="absolute top-0 left-0 w-full h-full object-cover bg-gradient-to-r from-primary to-black opacity-[35%]"
@@ -92,42 +87,6 @@ const features = [
       </div>
     </div>
   </section>
-  <!-- <section class="">
-    <div class="grid grid-cols-3 max-md:grid-cols-1">
-      {
-        features.map((feature, index) => (
-          <div class="relative">
-            <a href="#" class="group hover:cursor-pointer">
-              <div
-                class={`absolute top-0 left-0 h-full opacity-75 w-full group-hover:opacity-0 transition duration-300 ${
-                  index == 0
-                    ? "bg-orange-500"
-                    : index == 1
-                      ? "bg-blue-500"
-                      : "bg-purple-500"
-                }`}
-              />
-              <div class="absolute top-0 pt-20 right-0 left-0 justify-between bottom-0 text-white uppercase flex flex-col gap-12">
-                <h1 class="text-6xl w-52 overflow-visible pt-4 border-t-8 ml-6 font-bold group-hover:text-5xl group-hover:w-32 transition-all">
-                  {feature.title}
-                </h1>
-                <p class="bg-primary p-4 w-full h-full text-lg opacity-0 md:group-hover:opacity-100 transition-all">
-                  {feature.description}
-                </p>
-              </div>
-            </a>
-
-            <Image
-              src={feature.image}
-              width={900}
-              alt={feature.title}
-              class="h-96 object-cover max-md:h-72"
-            />
-          </div>
-        ))
-      }
-    </div>
-  </section> -->
   <section class="py-10 px-4 flex flex-col gap-12 items-center">
     <div class="flex flex-col gap-12 max-md:gap-6 text-center">
       <h1 class="text-6xl text-center max-md:text-4xl">NAU MAI, HAERE MAI</h1>
@@ -403,6 +362,29 @@ const features = [
     </div>
   </section>
 </Layout>
+
+<script>
+  import { gsap } from "gsap";
+  import SplitType from "split-type";
+
+  const text = new SplitType("#hero-text");
+
+  // default char styles in main.css
+
+  var heroTimeline = gsap.timeline();
+
+  heroTimeline
+    .to(".char", {
+      y: 0,
+      duration: 0.1,
+      stagger: 0.05,
+      delay: 0.2,
+    })
+    .to("#hero-img", {
+      opacity: 1,
+      duration: 0.5,
+    });
+</script>
 
 <script>
   // import Swiper bundle with all modules installed
