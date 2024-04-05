@@ -75,16 +75,23 @@ const features = [
           >Join Us Today</a
         >
       </div>
-      <Image
+      <img 
+        id="hero-img"
+        data-src={`https://res.cloudinary.com/${import.meta.env.CLOUDINARY_CLOUD_NAME}/image/upload/w_auto/ataahifitness/IMG_09902_w62gfl.jpg`} 
+        loading="eager"
+        fetchpriority="high"
+        alt="Ata Ahi Fitness"
+        class="cld-responsive opacity-0 absolute top-0 left-0 w-full h-full object-cover"/>
+      <!-- <Image
         id="hero-img"
         src={heroBGImg}
-        widths={[240, 720]}
-        sizes={`(max-width: 720px) 240px, 720px`}
+        width={heroBGImg.width / 5}
+        densities={[4, 5]}
         fetchpriority="high"
         loading={"eager"}
         alt="Ata Ahi Fitness"
         class="opacity-0 absolute top-0 left-0 w-full h-full object-cover"
-      />
+      /> -->
       <div
         class="absolute top-0 left-0 w-full h-full object-cover bg-gradient-to-r from-primary to-black opacity-[35%]"
       >
