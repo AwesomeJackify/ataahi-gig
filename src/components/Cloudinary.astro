@@ -1,0 +1,40 @@
+---
+// Import the Cloudinary class.
+import { Cloudinary } from "@cloudinary/url-gen";
+// Import any actions required for transformations.
+import { scale, fill } from "@cloudinary/url-gen/actions/resize";
+
+const { srcUrl, altText, style, isSquare } = Astro.props;
+
+// Create a Cloudinary instance and set your cloud name.
+const cld = new Cloudinary({
+cloud: {
+    cloudName: import.meta.env.CLOUDINARY_CLOUD_NAME,
+  },
+});
+
+// Instantiate a CloudinaryImage object for the image with the public ID, 'docs/models'.
+const largeImage = cld.image(srcUrl);
+const smallImage = cld.image(srcUrl);
+
+// Resize to 250 x 250 pixels using the 'fill' crop mode.
+if (isSquare) {
+  largeImage.resize(fill().width(800).height(800));
+  smallImage.resize(fill().width(500).height(500));
+} else {
+  largeImage.resize(scale().width(800));
+  smallImage.resize(scale().width(500));
+}
+---
+
+<picture class="w-full">
+  <source srcset={largeImage.toURL()} media="(min-width: 600px)" />
+  <img
+    id="hero-img"
+    src={smallImage.toURL()}
+    alt={altText}
+    class={style}
+    width="100px"
+    height="100px"
+  />
+</picture>
