@@ -10,8 +10,6 @@ import cuteImg from "@assets/images/cute.jpg";
 import Map from "@components/Map.astro";
 import { Icon } from "astro-icon";
 
-import CloudImage from "@components/Cloudinary.astro";
-
 import heroBGImg from "@assets/images/gym/IMG_09902.jpg";
 
 import amenitiesImg1 from "@assets/images/gym/IMG_0990.jpg";
@@ -27,8 +25,6 @@ import amenitiesImg10 from "@assets/images/gym/IMG_1028.jpg";
 import amenitiesImg11 from "@assets/images/gym/IMG_1034.jpg";
 import amenitiesImg12 from "@assets/images/gym/IMG_1037.jpg";
 import PricingCard from "@components/PricingCard.astro";
-
-var cloudinary = import.meta.env.CLOUDINARY_CLOUD_NAME;
 
 const features = [
   {
@@ -79,28 +75,16 @@ const features = [
           >Join Us Today</a
         >
       </div>
-      <CloudImage
-        srcUrl="ataahifitness/IMG_09902_w62gfl"
-        altText="Ata Ahi Fitness"
-        style="absolute opacity-0 absolute top-0 left-0 w-full h-full object-cover"/>
-      
-      <!-- <img 
-        id="hero-img"
-        data-src={`https://res.cloudinary.com/${cloudinary}/image/upload/c_limit,w_auto/dpr_auto/ataahifitness/IMG_09902_w62gfl.jpg`} 
-        loading="eager"
-        fetchpriority="high"
-        alt="Ata Ahi Fitness"
-        class="cld-responsive opacity-0 absolute top-0 left-0 w-full h-full object-cover"/> -->
-      <!-- <Image
+      <Image
         id="hero-img"
         src={heroBGImg}
-        width={heroBGImg.width / 5}
-        densities={[4, 5]}
+        widths={[240, 720]}
+        sizes={`(max-width: 720px) 240px, 720px`}
         fetchpriority="high"
         loading={"eager"}
         alt="Ata Ahi Fitness"
         class="opacity-0 absolute top-0 left-0 w-full h-full object-cover"
-      /> -->
+      />
       <div
         class="absolute top-0 left-0 w-full h-full object-cover bg-gradient-to-r from-primary to-black opacity-[35%]"
       >
