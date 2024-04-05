@@ -78,7 +78,8 @@ const features = [
       <Image
         id="hero-img"
         src={heroBGImg}
-        width={1300}
+        widths={[240, 720]}
+        sizes={`(max-width: 720px) 240px, 720px`}
         alt="Ata Ahi Fitness"
         class="opacity-0 absolute top-0 left-0 w-full h-full object-cover"
       />

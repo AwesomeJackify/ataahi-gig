@@ -73,7 +73,8 @@ import adele from "@assets/images/adelCROP2.jpg";
               <Image
                 class="rounded-full w-64 h-64 object-cover bg-black"
                 src={helicson}
-                width={500}
+                widths={[240, 240]}
+                sizes={`(max-width: 720px) 240px, 240px`}
                 alt={"Personal Trainer at gym"}
               />
               <div>
@@ -95,7 +96,8 @@ import adele from "@assets/images/adelCROP2.jpg";
               <Image
                 class="rounded-full w-64 h-64 object-cover bg-black"
                 src={adele}
-                width={500}
+                widths={[240, 240]}
+                sizes={`(max-width: 720px) 240px, 240px`}
                 alt={"Owner of Gym Adele"}
               />
               <div>
