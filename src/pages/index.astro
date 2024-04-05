@@ -10,8 +10,6 @@ import cuteImg from "@assets/images/cute.jpg";
 import Map from "@components/Map.astro";
 import { Icon } from "astro-icon";
 
-const cloudinary = import.meta.env.CLOUDINARY_CLOUD_NAME
-
 import heroBGImg from "@assets/images/gym/IMG_09902.jpg";
 
 import amenitiesImg1 from "@assets/images/gym/IMG_0990.jpg";
@@ -27,6 +25,8 @@ import amenitiesImg10 from "@assets/images/gym/IMG_1028.jpg";
 import amenitiesImg11 from "@assets/images/gym/IMG_1034.jpg";
 import amenitiesImg12 from "@assets/images/gym/IMG_1037.jpg";
 import PricingCard from "@components/PricingCard.astro";
+
+var cloudinary = import.meta.env.CLOUDINARY_CLOUD_NAME;
 
 const features = [
   {
