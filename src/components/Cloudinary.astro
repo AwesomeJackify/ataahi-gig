@@ -1,14 +1,14 @@
 ---
 // Import the Cloudinary class.
-import { Cloudinary } from "@cloudinary/url-gen";
+import { Cloudinary as CloudinaryUrlGen } from "@cloudinary/url-gen";
 // Import any actions required for transformations.
 import { scale, fill } from "@cloudinary/url-gen/actions/resize";
 
 const { srcUrl, altText, style, isSquare } = Astro.props;
 
 // Create a Cloudinary instance and set your cloud name.
-const cld = new Cloudinary({
-cloud: {
+const cld = new CloudinaryUrlGen({
+  cloud: {
     cloudName: import.meta.env.CLOUDINARY_CLOUD_NAME,
   },
 });
