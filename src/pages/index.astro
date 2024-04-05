@@ -10,6 +10,8 @@ import cuteImg from "@assets/images/cute.jpg";
 import Map from "@components/Map.astro";
 import { Icon } from "astro-icon";
 
+const cloudinary = import.meta.env.CLOUDINARY_CLOUD_NAME
+
 import heroBGImg from "@assets/images/gym/IMG_09902.jpg";
 
 import amenitiesImg1 from "@assets/images/gym/IMG_0990.jpg";
@@ -77,7 +79,7 @@ const features = [
       </div>
       <img 
         id="hero-img"
-        data-src={`https://res.cloudinary.com/${import.meta.env.CLOUDINARY_CLOUD_NAME}/image/upload/w_auto/ataahifitness/IMG_09902_w62gfl.jpg`} 
+        data-src={`https://res.cloudinary.com/${cloudinary}/image/upload/w_auto/ataahifitness/IMG_09902_w62gfl.jpg`} 
         loading="eager"
         fetchpriority="high"
         alt="Ata Ahi Fitness"
