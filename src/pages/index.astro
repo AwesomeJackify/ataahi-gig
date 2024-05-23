@@ -62,7 +62,7 @@ const features = [
         </h1>
         <h1
           id="hero-text"
-          class="uppercase text-8xl font-bold max-md:text-4xl z-10 overflow-hidden"
+          class="uppercase text-8xl font-bold max-md:text-4xl z-10 overflow-hidden opacity-0"
         >
           Ata Ahi Fitness
         </h1>
@@ -422,6 +422,9 @@ const features = [
     var heroTimeline = gsap.timeline();
 
     heroTimeline
+      .set("#hero-text", {
+        autoAlpha: 1,
+      })
       .to(".char", {
         y: 0,
         duration: 0.1,
